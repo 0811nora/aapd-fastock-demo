@@ -139,1039 +139,431 @@
           <main id="card-area" class="content">
             <div class="d-flex flex-wrap g-4">
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0  position-relative" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                    <div class="card-img-wrapper overflow-hidden rounded-4">
-                      <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                      <div class="d-sm-none tag-s tag-yellow"></div>
-                      <%- include('./layout/inCardBtn.ejs'); -%>
-                      <img
-                        src="/assets/images/Homepage/card 1.png"
-                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                        alt="貓咪家庭"
-                      />
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/Homepage/card 1.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="貓咪家庭" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      <a href="./product-details.html" class="stretched-link text-black">貓咪家庭</a>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
                     </div>
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        <a
-                          href="./product-details.html"
-                          class="stretched-link text-black"
-                        >
-                          貓咪家庭</a
-                        >
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$100</p>
-                      </div>
-                    </div>
+                  </div>
                 </div>
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-blue"></div>
                     <div class="d-sm-none tag-s tag-blue"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-1.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        海岸日落餘暉
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p><s class="text-secondary-800">120</s> <span class="text-error fs-lg fw-bold">$0</span></p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-1.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="海岸日落餘暉" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      <a href="./product-details.html" class="stretched-link text-black">海岸日落餘暉</a>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p><s class="text-secondary-800">120</s> <span class="text-error fs-lg fw-bold">$0</span></p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-2.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        神秘霧林
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$140</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-2.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="神秘霧林">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      神秘霧林
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$140</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
                     <div class="d-sm-none tag-s tag-yellow"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-3.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        山嶺晨曦
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$130</p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-3.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="山嶺晨曦">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      山嶺晨曦
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$130</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-4.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        粉櫻大道春景
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$130</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-4.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="粉櫻大道春景">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      粉櫻大道春景
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$130</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-pink"></div>
                     <div class="d-sm-none tag-s tag-pink"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-5.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        現代辦公佈置
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p><s class="text-secondary-800">120</s> <span class="text-error fs-lg fw-bold">$100</span></p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-5.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="現代辦公佈置">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      現代辦公佈置
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p><s class="text-secondary-800">120</s> <span class="text-error fs-lg fw-bold">$100</span></p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-blue"></div>
                     <div class="d-sm-none tag-s tag-blue"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-6.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        演講者
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p><s class="text-secondary-800">100</s> <span class="text-error fs-lg fw-bold">$0</span></p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-6.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="演講者">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      演講者
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p><s class="text-secondary-800">100</s> <span class="text-error fs-lg fw-bold">$0</span></p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-7.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        居家遠距工作
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$100</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-7.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="居家遠距工作">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      居家遠距工作
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-8.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        萌貓日常
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$100</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-8.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="萌貓日常">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      萌貓日常
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
                     <div class="d-sm-none tag-s tag-yellow"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-9.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        奔馳馬群
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-9.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="奔馳馬群">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      奔馳馬群
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
                     </div>
                   </div>
+                </div>
 
+              </div>
+              <div class="h-100 me-6 mb-6">
+                <div class="card border-0 position-relative" style="width: 18rem;">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-11.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="現代室內設計">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      現代室內設計
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$120</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-10.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        溫馨家庭客廳
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-12.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="室內植物架">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      室內植物架
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-11.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        現代室內設計
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$120</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
-                  <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-12.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        室內植物架
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
-                  <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-pink"></div>
                     <div class="d-sm-none tag-s tag-pink"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-13.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        粉紅蓮花
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p><s class="text-secondary-800">100</s> <span class="text-error fs-lg fw-bold">$90</span></p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-13.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="粉紅蓮花">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      粉紅蓮花
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p><s class="text-secondary-800">100</s> <span class="text-error fs-lg fw-bold">$90</span></p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
                     <div class="d-sm-none tag-s tag-yellow"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-14.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        現代建築
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$120</p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-14.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="現代建築">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      現代建築
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$120</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
                     <div class="d-sm-none tag-s tag-yellow"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-15.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        星空山景
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$130</p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-15.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="星空山景">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      星空山景
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$130</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-16.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        室內植物與衣物
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-16.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="室內植物與衣物">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      室內植物與衣物
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
-
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-17.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        美食拼盤
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-17.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="美食拼盤">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      美食拼盤
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
                     <div class="d-sm-none tag-s tag-yellow"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-18.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        火箭發射
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-18.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="火箭發射">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      火箭發射
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
               <div class="h-100 me-6 mb-6">
-                <div class="card border-0" style="width: 18rem;">
+                <div class="card border-0 position-relative" style="width: 18rem;">
                   <!-- 卡片圖片區 -->
-                  <div class="position-relative overflow-hidden rounded-4">
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
                     <div class="d-none d-sm-block tag-m tag-yellow"></div>
                     <div class="d-sm-none tag-s tag-yellow"></div>
-                    <!-- 漸層+[購物車+愛心(電腦版顯示)]+Ryan標籤(手機板顯示) -->
-                    <!-- 購物車+愛心 -->
-                    <div class="d-none d-md-flex inCardBtnGroup inCardPosition-16">
-                      <button type="button" class="inCardCart icon-M shadow">
-                        <svg class="icon-cart-outline" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M3.09792 2.00462L3.19978 2.01926L5.5268 2.48314C6.02856 2.58321 6.41589 2.9761 6.51206 3.47048L6.52675 3.57106L6.90969 6.99987H20.7455C21.5418 6.99987 22.1367 7.73076 21.9727 8.50772L20.0727 17.508C19.9503 18.0861 19.4381 18.5002 18.8455 18.5002H7.23975C6.59854 18.4999 6.06125 18.0169 5.99397 17.381L5.01458 8.10927L4.59344 4.33573L2.80606 3.98026L2.70715 3.95486C2.22124 3.80589 1.91792 3.3112 2.01962 2.80347C2.12152 2.29589 2.59207 1.95601 3.09792 2.00462ZM7.91748 16.5001H18.2353L19.819 8.99992H7.12516L7.91748 16.5001Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M9.02033 20.5C9.02033 21.3284 8.34682 22 7.516 22C6.68518 22 6.01167 21.3284 6.01167 20.5C6.01167 19.6715 6.68518 18.9999 7.516 18.9999C8.34682 18.9999 9.02033 19.6715 9.02033 20.5Z"
-                            fill="currentColor"></path>
-                          <path
-                            d="M20.0521 20.5C20.0521 21.3284 19.3786 22 18.5478 22C17.717 22 17.0434 21.3284 17.0434 20.5C17.0434 19.6715 17.717 18.9999 18.5478 18.9999C19.3786 18.9999 20.0521 19.6715 20.0521 20.5Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                      <button type="button" class="inCardFav icon-M shadow">
-                        <svg class="icon-heart" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path class="heart-path"
-                            d="M11.9996 4.71082C14.2936 2.42295 17.9973 2.42971 20.2828 4.73133C22.5713 7.03634 22.5713 10.771 20.2828 13.0761L12.8863 20.5253C12.3974 21.0177 11.6017 21.0177 11.1129 20.5253L3.71638 13.0761C1.42787 10.771 1.42787 7.03634 3.71638 4.73133C6.0019 2.42971 9.70559 2.42295 11.9996 4.71082ZM18.8638 6.14051C17.3536 4.6196 14.9082 4.61965 13.398 6.14051L11.9996 7.54871L10.6011 6.14051C9.09091 4.61965 6.64552 4.6196 5.13532 6.14051C3.62111 7.66565 3.62111 10.1417 5.13532 11.6669L11.9996 18.5809L18.8638 11.6669C20.3781 10.1417 20.3781 7.66565 18.8638 6.14051Z"
-                            fill="currentColor"></path>
-                        </svg>
-                      </button>
-                    </div>
-                    <!-- Ryan標籤 -->
-                    <div class="d-md-none fs-sm name-tag position-absolute bottom-0 start-0 py-1 px-2 ms-3 mb-3">
-                      Ryan
-                    </div>
-                    <!-- 漸層區 -->
-                    <div class="gradient"></div>
-                    <img src="/assets/images/產品列表頁/card-19.png"
-                      class="card-img-top img-fluid feature-card-img rounded-4 oveflow-hidden" alt="貓咪家庭">
-                    <!-- 卡片描述區 -->
-                    <div class="card-body">
-                      <h5 class="card-title fs-md fs-md-lg fw-bold">
-                        流星
-                      </h5>
-                      <div class="card-text d-flex justify-content-between">
-                        <p>相片</p>
-                        <p>$110</p>
-                      </div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-19.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="流星">
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      流星
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
                     </div>
                   </div>
-
                 </div>
+
               </div>
             </div>
-            <div class="more-btn d-flex justify-content-center">
-              <button type="button" class="btn btn-sec-outline">查看更多</button>
-            </div>
-          </main>
         </div>
+        <div class="more-btn d-flex justify-content-center">
+          <button type="button" class="btn btn-sec-outline">查看更多</button>
+        </div>
+        </main>
+      </div>
       </div>
 
       <%- include('./layout/footer'); -%>

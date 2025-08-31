@@ -1,0 +1,82 @@
+// system icon樣式設定
+// icon size預設為medium
+@mixin icon-size(
+  $py-sz: 12px,
+  $px-sz: 12px,
+  $bdrs-sz: 16px,
+  $w-sz: 48px,
+  $h-sz: 48px
+) {
+  padding: $py-sz $px-sz;
+  border-radius: $bdrs-sz;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $w-sz;
+  height: $h-sz;
+  flex-shrink: 0;
+}
+@mixin icon-base(
+  $bd-base: none,
+  $position-base: relative,
+  $overflow-base: hidden
+) {
+  display: flex;
+  align-items: center;
+  border: $bd-base;
+  position: $position-base;
+  overflow: $overflow-base;
+  cursor: pointer;
+  z-index: 10;
+}
+@mixin icon-color($i-color: $white, $i-bg-color: $primary) {
+  color: $i-color;
+  background-color: $i-bg-color;
+}
+@mixin icon-border($i-border: $primary) {
+  border: 1px solid $i-border;
+}
+// icon hover style
+@mixin icon-hover-style($i-h-bg-color: $primary-50) {
+  background: $i-h-bg-color;
+  transition: opacity 0.3s ease;
+}
+@mixin overlay-style($overlay-bgc: rgba(0, 0, 0, 0.2)) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $overlay-bgc;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+// icon disabled style
+@mixin disabled-style {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+// icon position style
+@mixin icon-position($i-pos: absolute, $i-top: 0, $i-right: 0) {
+  position: $i-pos;
+  top: $i-top;
+  right: $i-right;
+}
+
+@mixin size-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin size-sm {
+  @media (max-width: 992px) {
+    @content;
+  }
+}

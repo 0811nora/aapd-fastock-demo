@@ -1,0 +1,21 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/typography";
+@import "../../node_modules/bootstrap";
+@import './utils/utilities';
+@import "bootstrap/scss/utilities/api";
+
+@import "/assets/scss/component/button";
+@import "/assets/scss/component/btn";
+
+@import "./components/_btn";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/index";
+@import "./pages/product-details";
+@import "./pages/checkout";
+@import "./pages/order-complete";
+@import "./pages/product-list";

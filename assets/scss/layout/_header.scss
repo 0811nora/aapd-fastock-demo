@@ -1,0 +1,357 @@
+// 基本設定
+img {
+  max-width: 100%;
+  min-width: 0;
+  object-fit: cover;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+// 先調整 搜尋框按鈕 (取代原本的 .btn)
+header .search-bar-btn {
+  display: inline-block;
+  color: $neutral;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 8px 12px;
+  border-radius: 16px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+// 下拉選單 先隱藏預設偽元素
+header .dropdown-toggle::after {
+  display: none;
+}
+// 強制固定搜尋欄「全部」dropdown寬度 避免滿版設定的影響
+.search-dropdown .dropdown-menu {
+  width: 85px !important;
+  min-width: 85px !important;
+  max-width: 85px !important;
+}
+
+// 下拉選單 再加設計稿的icon
+header .dropdown-toggle {
+  &::after {
+    display: none;
+  }
+  padding-right: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg class='icon-down' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.65 8.24079C19.0693 8.60021 19.1178 9.23064 18.7584 9.64997L12.7584 16.65C12.5684 16.8716 12.2915 16.9996 11.9996 16.9996C11.7077 16.9996 11.4308 16.8716 11.2408 16.65L5.24079 9.64997C4.88137 9.23064 4.92986 8.60021 5.34919 8.24079C5.76851 7.88137 6.39895 7.92986 6.75837 8.34919L11.9996 14.4634L17.2408 8.34919C17.6002 7.92986 18.2306 7.88137 18.65 8.24079Z' fill='%23262626' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 24px 24px;
+}
+
+// 搜尋框輸入時
+header .form-control {
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg class='icon-search' width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 2.5C15.1944 2.5 19 6.30558 19 11C19 12.9868 18.316 14.8125 17.1738 16.2598L21.707 20.793L21.7754 20.8691C22.0957 21.2619 22.0731 21.8409 21.707 22.207C21.3409 22.5731 20.7619 22.5957 20.3691 22.2754L20.293 22.207L15.7598 17.6738C14.3125 18.816 12.4868 19.5 10.5 19.5C5.80558 19.5 2 15.6944 2 11C2 6.30558 5.80558 2.5 10.5 2.5ZM10.5 4.5C6.91015 4.5 4 7.41015 4 11C4 14.5899 6.91015 17.5 10.5 17.5C14.0899 17.5 17 14.5899 17 11C17 7.41015 14.0899 4.5 10.5 4.5Z' fill='var(--ui6-sys-color-neutral-on-surface-def, %23262626)' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 24px 24px;
+  flex-grow: 1;
+}
+
+// 分隔線
+header .divider {
+  position: absolute;
+  left: 75px;
+  height: 100%;
+  width: 1px;
+  background-color: $neutral-300;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease-in-out;
+}
+
+// 相機按鈕
+.btn-image-search {
+  padding-right: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg class='icon-camera' width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8955 3.50488C16.3874 3.54619 16.8142 3.86771 16.9873 4.33203L17.0205 4.43359L17.7578 7.05566H20.75C21.4404 7.05566 22 7.61531 22 8.30566V20.25C22 20.9404 21.4404 21.5 20.75 21.5H3.25C2.55964 21.5 2 20.9404 2 20.25V8.30566C2 7.61531 2.55964 7.05566 3.25 7.05566H6.24219L6.97949 4.43359C7.135 3.88063 7.6393 3.50053 8.21094 3.5H15.7891L15.8955 3.50488ZM7.75781 9.05566H4V19.5H20V9.05566H16.2422L15.2422 5.5H8.75781L7.75781 9.05566ZM12 9.5C14.2091 9.5 16 11.2909 16 13.5C16 15.7091 14.2091 17.5 12 17.5C9.79086 17.5 8 15.7091 8 13.5C8 11.2909 9.79086 9.5 12 9.5ZM12 11.5C10.8954 11.5 10 12.3954 10 13.5C10 14.6046 10.8954 15.5 12 15.5C13.1046 15.5 14 14.6046 14 13.5C14 12.3954 13.1046 11.5 12 11.5Z' fill='var(--ui6-sys-color-neutral-on-surface-def, %23262626)' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+// 最後再排版 搜尋框整體
+header .input-group {
+  width: 440px;
+  position: relative;
+  border: 1px solid $neutral-300;
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: none;
+  @media (max-width: 992px) {
+    width: 365px;
+  }
+  @media (max-width: 768px) {
+    width: 295px;
+  }
+
+  // 移除預設的子元素邊框，讓父容器統一控制
+  > .form-control,
+  > .search-bar-btn {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  &:hover {
+    border-color: $neutral-500;
+    .divider {
+      background-color: $neutral-500;
+    }
+  }
+
+  // 用within統一focus效果
+  // 參考https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within
+  &:focus-within {
+    border-color: $neutral-500;
+    border-width: 2px;
+    box-shadow: 0 0 0 0.25rem rgba(140, 140, 140, 0.25);
+    .divider {
+      background-color: $neutral-500;
+    }
+  }
+}
+// input的全部dropdown
+header .input-group .dropdown {
+  .dropdown-menu .show {
+    width: 80px;
+  }
+}
+header ul.dropdown-menu.show {
+  display: inline-block;
+}
+
+// login btn
+header .nav-login-btn {
+  @include icon-size(
+    $py-sz: 8px,
+    $px-sz: 12px,
+    $bdrs-sz: 12px,
+    $w-sz: 61px,
+    $h-sz: 40px
+  );
+}
+
+// 分類下拉選單--------------
+header .nav-link {
+  display: inline-block;
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+header .nav-link:hover {
+  opacity: 0.8;
+}
+
+header .nav-item-dropdown {
+  // 大於用法https://pjchender.blogspot.com/2015/07/css.html
+  // 指定子元素
+  &:hover > .dropdown-menu-hover {
+    display: flex;
+  }
+}
+
+header .dropdown-menu {
+  width: 100%;
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0%;
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 500;
+  list-style: none;
+  margin: 0;
+}
+
+// pc版分類下拉選單
+// a連結+section的hover效果
+.sub-nav .dropdown {
+  &:hover ~ section.dropdown-menu {
+    display: block;
+  }
+}
+section.dropdown-menu {
+  display: none;
+}
+
+.sub-nav .nav-item-dropdown {
+  section.dropdown-menu {
+    display: none;
+  }
+  &:hover section.dropdown-menu {
+    display: block;
+  }
+}
+
+.list-left {
+  flex-basis: 25%;
+  // border: 1px solid red; 檢查用
+  padding: 16px 40px;
+}
+.list-left-pills-btn {
+  color: $black;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  &:hover {
+    background-color: rgba($black, 0.05);
+  }
+  &:active,
+  &:focus {
+    border: 1px solid $secondary-900;
+  }
+  &.active {
+    color: #fff;
+    background-color: #000;
+    box-shadow: none;
+  }
+}
+.pills-img {
+  width: calc(50% - 4px);
+  height: 135px;
+  border-radius: 12px;
+  overflow: hidden;
+  vertical-align: middle;
+  object-fit: cover;
+  @media screen {
+  }
+}
+
+.list-right {
+  flex-basis: 75%;
+  // border: 1px solid green; 檢查用
+  padding: 16px 40px;
+  .list-group {
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+    .list-group-item {
+      display: block;
+      max-width: 260px;
+      width: calc((75vw - 180px) / 3);
+      padding: 4px 8px;
+      color: $neutral;
+      border: none;
+      border-radius: 4px;
+      text-align: left;
+      background-color: transparent;
+      &:hover {
+        background-color: $neutral-100;
+      }
+      &:disabled {
+        color: $secondary-700;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.list-right {
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: black;
+    text-decoration: none;
+    background-color: none;
+  }
+}
+.list-divider {
+  // height: 80%;
+  border-right: 2px solid $secondary-400;
+  z-index: inherit;
+}
+.divider-box {
+  width: 2px;
+  height: 484px;
+  background-color: $secondary-400;
+  z-index: inherit;
+  margin: 0px 16px;
+}
+
+// 手機板分類icon
+header .navbar-toggler {
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  &:hover,
+  &:active {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+// 手機板offcanvas滿版
+.offcanvas-full {
+  width: 100vw !important;
+}
+
+.sub-nav {
+  .sub-nav-btn {
+    display: flex;
+    align-items: center;
+    @include icon-size($px-sz: 24px, $w-sz: 82px);
+    @include icon-color($i-color: $black, $i-bg-color: $white);
+    &:hover {
+      @include icon-hover-style($secondary-100);
+    }
+    &:focus {
+      @include icon-border($secondary-900);
+      box-shadow: none;
+    }
+    @media (max-width: 1140px) {
+      @include icon-size($px-sz: 12px, $w-sz: 70px);
+    }
+  }
+}
+
+// offcanvas 點選效果先留著做檢查用 待刪
+// .offcanvas-nav {
+//   ul li a {
+//     border-radius: 4px;
+//     &:active,
+//     &:focus {
+//       box-shadow: 0 2px 4px 0 rgba($primary-200, 0.8);
+//     }
+//   }
+// }
+
+// offcanvas mainmenu
+.offcanvas {
+  .btn-close {
+    box-sizing: border-box;
+    opacity: 1;
+    border: none;
+  }
+}
+.offcanvas li a {
+  cursor: pointer;
+}
+
+// offcanvas submenu
+.offcanvas-submenu {
+  .btn-close {
+    margin-left: 0;
+  }
+  .list-group-item {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

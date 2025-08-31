@@ -1,0 +1,214 @@
+.hero {
+  width: 100%;
+  height: 280px;
+  padding-left: 10%;
+  background-color: $secondary-100;
+  background-image: url(/assets/images/Homepage/hero-main.svg);
+  background-size: fill;
+  background-position: right 8vw center;
+  background-repeat: no-repeat;
+  @media (max-width: 992px){
+    padding-left: 5%;
+    min-height: 340px;
+    background-position: right 0 center;
+  }
+  @media (max-width: 768px) {
+    padding-left: 5%;
+    padding-right: 0;
+    height: 340px;
+  }
+  @media (max-width: 576px) {
+    height: 420px;
+    min-height: 375px;
+    background-image: url(/assets/images/Homepage/section-hero-mobile.svg);
+    background-size: cover;
+    background-position: center bottom;
+    aspect-ratio: 1.618/1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  @media (max-width: 375px) {
+    height: 340px;
+  }
+}
+.color-block {
+  background-color: $accent;
+}
+// 膠囊選單設定
+.category .nav-pills {
+  width: 340px;
+  border-radius: 20px;
+  background-color: $secondary-100;
+  .nav-link {
+    color: #000;
+    background-color: transparent;
+    padding: 8px 32px;
+    border-radius: 12px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    &:focus,
+    &:active,
+    &.active {
+      color: $white;
+      background-color: #000;
+    }
+  }
+}
+
+// swiper+卡片區設定
+.text-btn {
+  width: 113px;
+}
+// swiper nav btn 先隱藏swiper原始按鈕
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.mySwiper .card {
+  width: calc((100% - 60px)) / 4;
+  border: none;
+  @media (max-width: 576px) {
+    width: calc((100% - 44px)) / 2;
+    img,
+    .card-img {
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+  }
+}
+.name-tag {
+  color: $white;
+  z-index: 200;
+}
+
+.mySwiper .card {
+  .name-tag {
+    display: none;
+  }
+  &:hover .name-tag {
+    display: block;
+  }
+}
+.card-img {
+  width: 100%;
+  height: 302px;
+  border-radius: 12px;
+}
+// 漸層用偽元素避免跟stretched-link衝突
+.card-img-wrapper {
+  position: relative;
+}
+.card-img-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 5%,
+    rgba(0, 0, 0, 0.7) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.card:hover .card-img-wrapper::after {
+  opacity: 1;
+}
+
+.card .inCardBtnGroup {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+.card:hover .inCardBtnGroup {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+// CTA
+// creator cta
+.c-cta {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: $secondary-100;
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    background-color: $accent;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s;
+    border-radius: 100%;
+  }
+  &:hover::before {
+    transform: translate(-50%, -50%) scale(100);
+  }
+}
+.cta-text {
+  width: 428px;
+  position: absolute;
+  top: center;
+  left: 10%;
+  z-index: 5;
+  @media (max-width: 992px) {
+    position: static;
+  }
+}
+.cta-img {
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    z-index: 3;
+  }
+}
+
+.join-btn {
+  @include icon-size(12px, 24px, 16px, 200px);
+  @include icon-color;
+  @include icon-border;
+  &:hover {
+    background-color: mix($secondary-black, $primary-600, 20%);
+  }
+  &:focus,
+  &:active {
+    @include icon-color;
+    @include icon-border($primary-800);
+    box-shadow: 0px 0px 0px 2px $primary-50;
+  }
+}
+
+// membership cta
+.m-cta {
+  width: 100%;
+  background-image: url(/assets/images/Homepage/section-3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  @media (max-width:768px) {
+    background-image: url(/assets/images/Homepage/section-3-mob.png);
+  }
+}

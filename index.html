@@ -8,15 +8,15 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/aapd-fastock-demo/assets/logo%20icon-CyIOzHpx.svg"
+      href="/aapd-fastock-demo/assets/logo%20icon-CYodmLSN.svg"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>首頁 | 快素 Fastock</title>
-    <script type="module" crossorigin src="/aapd-fastock-demo/assets/main-BCw3WT2z.js"></script>
-    <link rel="stylesheet" crossorigin href="/aapd-fastock-demo/assets/main-ptxOVZrs.css">
+    <script type="module" crossorigin src="/aapd-fastock-demo/assets/main-nqUl5lbr.js"></script>
+    <link rel="stylesheet" crossorigin href="/aapd-fastock-demo/assets/main-B8a7yX3_.css">
   </head>
   <body>
     <header>
@@ -31,12 +31,12 @@
       <a class="navbar-brand" href="index.html"
         ><img
           class="d-none d-lg-block"
-          src="/aapd-fastock-demo/assets/logo-desktop-BJaVMyFn.svg"
+          src="/aapd-fastock-demo/assets/logo-desktop-BcjNIg1L.svg"
           alt="logo-desktop"
         />
         <img
           class="d-lg-none"
-          src="/aapd-fastock-demo/assets/logo-mobile-XwOfFSbw.svg"
+          src="/aapd-fastock-demo/assets/logo-mobile-ELEScDCN.svg"
           alt="logo-mobile"
         />
       </a>
@@ -4043,7 +4043,7 @@
     >
       <div class="offcanvas-header shadow">
         <h5 class="offcanvas-title" id="mainMenuLabel">
-          <img src="/aapd-fastock-demo/assets/logo-mobile-XwOfFSbw.svg" alt="logo-mobile.svg" />
+          <img src="/aapd-fastock-demo/assets/logo-mobile-ELEScDCN.svg" alt="logo-mobile.svg" />
         </h5>
         <button
           type="button"
@@ -6824,7 +6824,7 @@
     <div class="d-flex flex-column flex-md-row justify-content-md-between pb-4 pb-mb-8 gap-8 border-bottom border-1 border-neutral-400">
         <div class="footer-title d-flex flex-column gap-6">
             <div class="footer-img">
-                <img src="/aapd-fastock-demo/assets/logo-desktop-BJaVMyFn.svg" alt="Fastock-logo">
+                <img src="/aapd-fastock-demo/assets/logo-desktop-BcjNIg1L.svg" alt="Fastock-logo">
             </div>
             <p class="fs-md text-neutral">
                 靈感從這裡開始，<br>
@@ -6899,42 +6899,46 @@
             </ul>
             </div>
     </div>
-</footer>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        freeMode: false,
-
-        navigation: {
-          nextEl: ".my-next-btn",
-          prevEl: ".my-prev-btn",
-        },
-
-        breakpoints: {
-          375: {
-            slidesPerView: 2,
-            spaceBetween: 12,
+      document.querySelectorAll('.mySwiper').forEach((swiperElement) => {
+      // 找到這個 swiper 所屬的容器
+        const container = swiperElement.closest('.container');
+            
+        new Swiper(swiperElement, {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          freeMode: false,
+          navigation: {
+            // 使用相對選擇器，只在當前容器內尋找按鈕
+            nextEl: container.querySelector('.my-next-btn'),
+            prevEl: container.querySelector('.my-prev-btn'),
           },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 16,
+          breakpoints: {
+            375: {
+              slidesPerView: 2,
+              spaceBetween: 12,
+            },
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            992: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
           },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+          effect: "slide",
+          mousewheel: {
+            revert: true,
           },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        },
-        effect: "slide",
-        mousewheel: {
-          revert: true,
-        },
-        speed: 400,
+          speed: 400,
+        });
       });
     </script>
   </body>

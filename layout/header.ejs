@@ -31,7 +31,7 @@
           >
             全部
           </button>
-          <ul class="dropdown-menu text-center">
+          <ul class="dropdown-menu shadow-lg">
             <li>
               <a class="dropdown-item" href="#">字型</a>
             </li>
@@ -72,10 +72,11 @@
           <span class="divider d-none d-lg-block"></span>
           <!-- 輸入關鍵字搜尋 -->
           <input
-            class="form-control"
+            class="form-control search-bar"
             type="search"
             placeholder="搜尋數百萬創意資源"
             aria-label="Search"
+            id="headerSearchBar"
           />
           <!-- 圖搜圖的圖示 -->
           <button
@@ -84,38 +85,457 @@
           ></button>
         </div>
       </form>
-      <!-- login-bar -->
+      <!-- login bar -->
       <ul class="list-unstyled mb-0 d-flex align-items-center gap-2">
+        <!-- 未登入狀態default -->
+        <div id="loggedOut">
+          <div class="mb-0 d-flex align-items-center">
+            <li class="nav-item me-2">
+              <a
+                class="nav-login-btn icon-primary-fill fs-sm fw-medium"
+                href="#"
+                role="button"
+                id="loginBtn"
+                >登入</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-login-btn icon-secondary-outline fs-sm fw-medium"
+                href="#"
+                role="button"
+                >註冊</a
+              >
+            </li>
+          </div>
+        </div>
+        <!-- 已登入狀態 點擊切換 -->
+        <div id="loggedIn" style="display: none">
+          <li class="nav-item">
+            <a
+              href="#"
+              role="button"
+              id="logoutBtn"
+              class="avatar-container rounded-circle"
+              ><img
+                src="/assets/images/Homepage/Avatar.svg"
+                alt="avatar"
+                class="rounded-circle"
+                width="36"
+                height="36"
+            /></a>
+          </li>
+        </div>
+        <!-- 購物車icon 可切結帳視窗 -->
         <li class="nav-item">
-          <a
-            class="nav-login-btn icon-primary-fill fs-sm fw-medium"
-            href="#"
-            role="button"
-            >登入</a
+          <!-- 結帳視窗 -->
+          <!-- 連結結帳modal -->
+          <button
+            type="button"
+            class="d-none d-md-block icon-S icon-secondary-outline position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#headerPcCheckout"
           >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-login-btn icon-secondary-outline fs-sm fw-medium"
-            href="#"
-            role="button"
-            >註冊</a
-          >
-        </li>
-        <li class="nav-item">
-          <button class="icon-S icon-secondary-outline" type="button">
             <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
           </button>
+          <!-- 電腦版結帳modal -->
+          <div
+            class="modal fade"
+            id="headerPcCheckout"
+            tabindex="-1"
+            aria-labelledby="headerCheckoutLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog position-absolute">
+              <div class="modal-content">
+                <div class="d-flex">
+                  <!-- 購物車商品 -->
+                  <div class="card pe-none border-0 modal-item-card">
+                    <!-- 卡片圖片區 -->
+                    <div class="position-relative overflow-hidden rounded-4">
+                      <!-- <div class="d-none d-sm-block tag-m tag-yellow"></div> -->
+                      <div class="tag-yellow"></div>
+                      <img
+                        src="/assets/images/Homepage/card1.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
+                        alt="貓咪家庭"
+                      />
+                    </div>
+                    <!-- 卡片描述區 -->
+                    <div class="card-body">
+                      <h5 class="card-title fs-md fs-md-lg fw-bold">
+                        <a
+                          href="./product-details.html"
+                          class="stretched-link text-black"
+                        >
+                          貓咪家庭</a
+                        >
+                      </h5>
+                      <div class="card-text d-flex justify-content-between">
+                        <p>相片</p>
+                        <p class="fs-md fs-md-lg text-notice">
+                          <span class="fs-sm text-neutral-600"
+                            ><del>120</del></span
+                          >
+                          $<span class="fs-md fs-md-lg fw-bold">100</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 結帳輸入 -->
+                  <div
+                    class="modal-body d-flex flex-column gap-4 modal-item-checkout"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5
+                        class="modal-title fs-lg fw-bold"
+                        id="headerCheckoutLabel"
+                      >
+                        訪客快速結帳
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img
+                          width="24"
+                          height="24"
+                          src="/assets/images/icon/icon-close.svg"
+                          alt="close"
+                        />
+                      </button>
+                    </div>
+                    <!-- 填寫資料 -->
+                    <form class="needs-validation" novalidate>
+                      <div class="form-floating mb-4 has-validation">
+                        <input
+                          type="email"
+                          class="form-control rounded-5"
+                          id="floatingInput"
+                          placeholder="請輸入Email"
+                          required
+                        />
+                        <label for="floatingInput">請輸入Email</label>
+                        <div class="invalid-feedback">請輸入有效電子信箱</div>
+                      </div>
+
+                      <div class="form-floating mb-0 w-100 has-validation">
+                        <input
+                          type="text"
+                          class="form-control rounded-top-5"
+                          id="cardholderInput"
+                          placeholder="信用卡持有者"
+                          required
+                        />
+                        <label for="cardholderInput">信用卡持有者</label>
+                        <div class="invalid-feedback">必填</div>
+                      </div>
+                      <div
+                        class="form-floating mb-0 position-relative has-validation"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardNumberInput"
+                          placeholder="xxxx-xxxx-xxxx-xxxx"
+                          maxlength="19"
+                          inputmode="numeric"
+                          required
+                        /><span class="credit-card-icon-wrapper">
+                          <img
+                            src="/assets/images/icon/icon-credit-card-gray.svg"
+                            alt="credit-card icon"
+                          />
+                        </span>
+                        <label for="cardNumberInput">xxxx-xxxx-xxxx-xxxx</label>
+                        <div class="invalid-feedback">必填</div>
+                      </div>
+                      <div class="d-flex">
+                        <div
+                          class="form-floating has-validation"
+                          style="width: 50%"
+                        >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="expiryDateInput"
+                            placeholder="MM / YY"
+                            maxlength="5"
+                            inputmode="numeric"
+                            required
+                          />
+                          <label for="expiryDateInput">MM / YY</label>
+                          <div class="invalid-feedback">必填</div>
+                        </div>
+                        <div
+                          class="form-floating has-validation"
+                          style="width: 50%"
+                        >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cvvInput"
+                            placeholder="CVV"
+                            maxlength="3"
+                            inputmode="numeric"
+                            required
+                          />
+                          <label for="cvvInput">CVC</label>
+                          <div class="invalid-feedback">必填</div>
+                        </div>
+                      </div>
+                      <!-- 打勾驗證+送出區 -->
+                      <div class="d-flex flex-column mt-4 py-4 gap-3">
+                        <p class="mb-3 text-center w-100">
+                          共計&nbsp;1&nbsp;項產品&nbsp;|&nbsp;付款總金額：$<span
+                            class="fw-bold"
+                            >&nbsp;100&nbsp;</span
+                          >元
+                        </p>
+                        <div>
+                          <div class="form-check mb-1 has-validation">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="agree"
+                              id="agreePolicy"
+                              required
+                            />
+                            <label class="form-check-label" for="agreePolicy">
+                              我同意<a href="#" class="text-black"
+                                ><u>服務條款</u></a
+                              >和<a href="#" class="text-black"
+                                ><u>隱私權政策</u></a
+                              >。 *
+                            </label>
+                            <div class="invalid-feedback">
+                              * 必須勾選同意條款
+                            </div>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="send"
+                              id="receivePromoMail"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="receivePromoMail"
+                            >
+                              我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                            </label>
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          id="goToCheckout"
+                          class="join-btn w-100"
+                          disabled
+                        >
+                          結帳
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 手機板結帳offcanvas -->
+          <button
+            type="button"
+            class="d-md-none icon-S icon-secondary-outline position-relative"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#headerMobCheckout"
+            aria-controls="offcanvasBottom"
+          >
+            <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+          </button>
+          <div
+            class="d-md-none offcanvas offcanvas-bottom"
+            tabindex="-1"
+            style="height: 635px"
+            id="headerMobCheckout"
+            aria-labelledby="offcanvasBottomLabel"
+          >
+            <div class="offcanvas-body small">
+              <div class="flex-column justify-content-start p-0">
+                <button
+                  type="button"
+                  class="btn-close mb-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+                <h5 class="fs-lg fw-bold me-auto mb-3">訪客快速結帳</h5>
+              </div>
+              <div class="d-flex gap-3 mb-5">
+                <img
+                  class="card-img-top rounded-5"
+                  src="/assets/images/Homepage/card1.png"
+                  alt="貓咪家庭"
+                  style="width: 50%"
+                />
+                <div
+                  class="offcanvas-card-text d-flex flex-column justify-content-between"
+                  style="width: 50%"
+                >
+                  <div class="card-text">
+                    <h6 class="fs-lg fw-bold">貓咪家庭</h6>
+                    <p>
+                      四隻可愛貓咪同框寫真，高畫質室內場景，適用於插畫、社群貼文、寵物相關設計與居家風格素材應用。
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p>
+                      <del>120</del>
+                      $<span class="fw-bold">100</span>
+                    </p>
+                    <a href="#" role="button">
+                      <img
+                        src="/assets/images/icon/icon-bin.svg"
+                        alt="bin icon"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- 填寫資料 -->
+              <form class="needs-validation" novalidate>
+                <div class="form-floating mb-4 has-validation">
+                  <input
+                    type="email"
+                    class="form-control rounded-5"
+                    id="mobFloatingInput"
+                    placeholder="請輸入Email"
+                    required
+                  />
+                  <label for="mobFloatingInput">請輸入Email</label>
+                  <div class="invalid-feedback">請輸入有效電子信箱</div>
+                </div>
+
+                <div class="form-floating mb-0 w-100 has-validation">
+                  <input
+                    type="text"
+                    class="form-control rounded-top-5"
+                    id="mobCardholderInput"
+                    placeholder="信用卡持有者"
+                    required
+                  />
+                  <label for="mobCardholderInput">信用卡持有者</label>
+                  <div class="invalid-feedback">必填</div>
+                </div>
+                <div
+                  class="form-floating mb-0 position-relative has-validation"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="mobCardNumberInput"
+                    placeholder="xxxx-xxxx-xxxx-xxxx"
+                    maxlength="19"
+                    inputmode="numeric"
+                    required
+                  /><span class="credit-card-icon-wrapper">
+                    <img
+                      src="/assets/images/icon/icon-credit-card-gray.svg"
+                      alt="credit-card icon"
+                    />
+                  </span>
+                  <label for="mobCardNumberInput">xxxx-xxxx-xxxx-xxxx</label>
+                  <div class="invalid-feedback">必填</div>
+                </div>
+                <div class="d-flex">
+                  <div class="form-floating has-validation" style="width: 50%">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobExpiryDateInput"
+                      placeholder="MM / YY"
+                      maxlength="5"
+                      inputmode="numeric"
+                      required
+                    />
+                    <label for="mobExpiryDateInput">MM / YY</label>
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <div class="form-floating has-validation" style="width: 50%">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobCvvInput"
+                      placeholder="CVV"
+                      maxlength="3"
+                      inputmode="numeric"
+                      required
+                    />
+                    <label for="mobCvvInput">CVC</label>
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                </div>
+                <!-- 打勾驗證+送出區 -->
+                <div class="d-flex flex-column mt-4 py-4 gap-3">
+                  <p class="mb-3 text-center text-black w-100">
+                    共計&nbsp;1&nbsp;項產品&nbsp;|&nbsp;付款總金額：$<span
+                      class="fw-bold"
+                      >&nbsp;100&nbsp;</span
+                    >元
+                  </p>
+                  <div>
+                    <div class="form-check mb-1 has-validation">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="agree"
+                        id="mobAgreePolicy"
+                        required
+                      />
+                      <label class="form-check-label" for="mobAgreePolicy">
+                        我同意<a href="#" class="text-black"><u>服務條款</u></a
+                        >和<a href="#" class="text-black"><u>隱私權政策</u></a
+                        >。 *
+                      </label>
+                      <div class="invalid-feedback">* 必須勾選同意條款</div>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="send"
+                        id="mobReceivePromoMail"
+                      />
+                      <label class="form-check-label" for="mobReceivePromoMail">
+                        我希望接收電子郵件公告和優惠，(可以隨時取消訂閱)。
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    id="goToCheckout"
+                    class="join-btn w-100"
+                    disabled
+                  >
+                    結帳
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </nav>
-  <!-- 分類nav-bar -->
   <div
     class="navbar navbar-expand-lg navbar-white bg-white fs-md d-flex justify-content-between mx-0 mx-md-9 mx-lg-0 px-3 px-lg-0 pb-0"
   >
     <!-- mobile search-bar -->
-    <form class="d-lg-none d-flex mb-6p">
+    <form class="d-lg-none d-flex mb-4">
       <div class="input-group">
         <!-- 下拉式搜尋 -->
         <button
@@ -134,10 +554,11 @@
         <span class="divider d-none d-lg-block"></span>
         <!-- 輸入關鍵字搜尋 -->
         <input
-          class="form-control"
+          class="form-control search-bar"
           type="search"
           placeholder="搜尋數百萬創意資源"
           aria-label="Search"
+          id="headerSearchBar"
         />
         <!-- 圖搜圖的圖示 -->
         <button
@@ -161,161 +582,10 @@
       <img src="/assets/images/icon/icon-Category.svg" alt="icon-Category" />
     </button>
     <!-- PC內容 -->
-    <% const menuItems = [ { name: '字型', id: 'font', categories: [ { title:
-    "字型類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
-    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
-    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "範本", id: "template",
-    categories: [ { title: "範本類型", items: ["動物", "風景", "產品", "3D",
-    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
-    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
-    "相片", id: "photo", categories: [ { title: "相片類型", items: ["動物",
-    "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
-    "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
-    "社群貼文"] } ] }, { name: "主題", id: "theme", categories: [ { title:
-    "主題類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
-    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
-    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "圖形", id: "graphics",
-    categories: [ { title: "圖形類型", items: ["動物", "風景", "產品", "3D",
-    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
-    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
-    "影片", id: "video", categories: [ { title: "影片類型", items: ["動物",
-    "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代",
-    "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
-    "社群貼文"] } ] }, { name: "音效", id: "audio", categories: [ { title:
-    "音效類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
-    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
-    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "插畫", id:
-    "illustration", categories: [ { title: "插畫類型", items: ["動物", "風景",
-    "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
-    "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ]
-    }, { name: "圖標", id: "icon", categories: [ { title: "圖標類型", items:
-    ["動物", "風景", "產品", "3D", "簽名", "文字"] }, { title: "風格", items:
-    ["現代", "復古", "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單",
-    "社群貼文"] } ] }, { name: "模板", id: "mockup", categories: [ { title:
-    "模板類型", items: ["動物", "風景", "產品", "3D", "簽名", "文字"] }, {
-    title: "風格", items: ["現代", "復古", "華麗"] }, { title: "用途", items:
-    ["海報", "影音", "傳單", "社群貼文"] } ] }, { name: "筆刷", id: "brush",
-    categories: [ { title: "筆刷類型", items: ["動物", "風景", "產品", "3D",
-    "簽名", "文字"] }, { title: "風格", items: ["現代", "復古", "華麗"] }, {
-    title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ] }, { name:
-    "3D", id: "3d", categories: [ { title: "3D類型", items: ["動物", "風景",
-    "產品", "3D", "簽名", "文字"] }, { title: "風格", items: ["現代", "復古",
-    "華麗"] }, { title: "用途", items: ["海報", "影音", "傳單", "社群貼文"] } ]
-    } ]; const tabsData = [ { id: "popular", name: "人氣", images: ["card1.png",
-    "card2.png", "card3.png", "card4.png", "card5.png", "card6.png"] }, { id:
-    "sale", name: "促銷", images: ["card7.png", "card8.png", "card9.png",
-    "card10.png", "card11.png", "card12.png"] }, { id: "free", name: "每週免費",
-    images: ["card13.png", "card14.png", "card1.png", "card2.png", "card3.png",
-    "card4.png"] } ]; %>
-
-    <div
-      class="collapse navbar-collapse d-none d-lg-flex justify-content-lg-center position-relative px-3 px-md-3 px-lg-0 pt-0 pb-6px"
-      id="navbarSupportedContent"
-    >
-      <ul
-        class="sub-nav list-unstyled mb-0 d-flex justify-content-center align-items-center"
-      >
-        <% menuItems.forEach((menuItem, index) => { %>
-        <li class="nav-item nav-item-dropdown" style="position: initial">
-          <a
-            href="#"
-            class="nav-link dropdown sub-nav-btn mb-6p"
-            role="button"
-            id="dropdownCateMenu<%= index %>"
-            aria-expanded="false"
-            ><%= menuItem.name %></a
-          >
-
-          <% if (menuItem.categories && menuItem.categories.length > 0) { %>
-          <section
-            class="dropdown-menu p-0"
-            style="width: 100%"
-            aria-labelledby="dropdownCateMenu<%= index %>"
-          >
-            <div class="d-flex">
-              <div class="list-left bg-neutral-100">
-                <ul
-                  class="nav nav-pills d-flex justify-content-center bg-white gap-2 p-2 mb-3 rounded-6"
-                  id="pills-tab-<%= menuItem.id %>"
-                  role="tablist"
-                >
-                  <% tabsData.forEach((tab, tabIndex) => { %>
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="list-left-pills-btn <%= tabIndex === 0 ? 'active' : '' %>"
-                      id="sub-pills-<%= tab.id %>-tab-<%= menuItem.id %>"
-                      data-bs-toggle="pill"
-                      data-bs-target="#sub-pills-<%= tab.id %>-<%= menuItem.id %>"
-                      type="button"
-                      role="tab"
-                      aria-controls="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
-                      aria-selected="<%= tabIndex === 0 ? 'true' : 'false' %>"
-                    >
-                      <%= tab.name %>
-                    </button>
-                  </li>
-                  <% }); %>
-                </ul>
-
-                <div
-                  class="tab-content"
-                  id="pills-tabContent-<%= menuItem.id %>"
-                >
-                  <% tabsData.forEach((tab, tabIndex) => { %>
-                  <div
-                    class="tab-pane fade <%= tabIndex === 0 ? 'show active' : '' %>"
-                    id="sub-pills-<%= tab.id %>-<%= menuItem.id %>"
-                    role="tabpanel"
-                    aria-labelledby="sub-pills-<%= tab.id %>-tab-<%= menuItem.id %>"
-                  >
-                    <div class="d-flex gap-2 flex-wrap">
-                      <% tab.images.forEach(image => { %>
-                      <img
-                        class="pills-img"
-                        src="/assets/images/Homepage/<%= image %>"
-                        alt="<%= image %>"
-                      />
-                      <% }); %>
-                    </div>
-                  </div>
-                  <% }); %>
-                </div>
-              </div>
-
-              <div class="list-right bg-white">
-                <ul class="list-unstyled d-flex align-items-center">
-                  <% menuItem.categories.forEach((category, categoryIndex) => {
-                  %>
-                  <li class="pb-0 mb-0">
-                    <ul
-                      class="list-unstyled list-group d-flex flex-column gap-3"
-                    >
-                      <li>
-                        <h3 class="fs-5 fw-bold"><%= category.title %></h3>
-                      </li>
-                      <% category.items.forEach(item => { %>
-                      <li>
-                        <a class="list-group-item" href="#"><%= item %></a>
-                      </li>
-                      <% }); %>
-                    </ul>
-                  </li>
-                  <% if (categoryIndex < menuItem.categories.length - 1) { %>
-                  <li class="divider-box"></li>
-                  <% } %> <% }); %>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <% } %>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
-
+    <%- include('./layout/pcDropdown.ejs'); -%>
     <!-- 手機板按鈕 -->
     <button
-      class="navbar-toggler border-none d-lg-none"
+      class="navbar-toggler border-none d-lg-none mb-4"
       type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#mainMenu"
@@ -543,7 +813,7 @@
       >
         <button
           type="button"
-          class="btn btn-link text-decoration-none"
+          class="btn btn-link text-decoration-none py-1 px-2"
           data-bs-toggle="offcanvas"
           data-bs-target="#mainMenu"
         >
@@ -564,7 +834,7 @@
       </div>
       <div class="offcanvas-body">
         <a
-          class="btn btn-pr-outline d-block text-primary mb-4"
+          class="btn btn-pr-outline d-block text-primary m-4"
           href="./product-list.html"
           role="button"
           ><span class="fs-md fw-medium letter-spacing-sm">查看全部</span></a

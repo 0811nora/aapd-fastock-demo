@@ -205,7 +205,7 @@
     font-size: 14px;
     margin: 16px;
   }
-  &-s {
+  &-lg-s{
     padding: 4px 8px;
     font-size: 12px;
     margin: 8px;
@@ -305,7 +305,13 @@
 
 .form-check-input:checked {
   background-color: currentColor;
-  border-color: currentColor;
+  // border-color: currentColor;
+  border-color: $primary;
+}
+
+.form-check-input:focus{
+  box-shadow: none;
+  border-color: #5553ba;
 }
 
 .checkbox-secondary {

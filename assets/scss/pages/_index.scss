@@ -7,29 +7,38 @@
   background-size: fill;
   background-position: right 8vw center;
   background-repeat: no-repeat;
-  @media (max-width: 992px){
+  @media (max-width: 992px) {
     padding-left: 5%;
+    padding-right: 5%;
     min-height: 340px;
     background-position: right 0 center;
   }
   @media (max-width: 768px) {
-    padding-left: 5%;
-    padding-right: 0;
-    height: 340px;
-  }
-  @media (max-width: 576px) {
-    height: 420px;
-    min-height: 375px;
+    min-height: 340px;
+    height: 520px;
     background-image: url(/assets/images/Homepage/section-hero-mobile.svg);
-    background-size: cover;
+    background-size: contain;
     background-position: center bottom;
     aspect-ratio: 1.618/1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 576px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 420px;
+    min-height: 375px;
+    background-size: contain;
+  }
+  @media (max-width: 414px) {
     height: 340px;
+  }
+}
+.fs-31 {
+  font-size: 42px;
+  @media (max-width: 768px) {
+    font-size: 31.31px;
   }
 }
 .color-block {
@@ -58,8 +67,13 @@
 }
 
 // swiper+卡片區設定
+// 查看更多的按鈕
 .text-btn {
   width: 113px;
+  @media (max-width: 576px) {
+    width: 92px;
+    padding: 12px;
+  }
 }
 // swiper nav btn 先隱藏swiper原始按鈕
 .swiper-button-prev,
@@ -79,19 +93,12 @@
       object-position: center;
       overflow: hidden;
     }
-  }
-}
-.name-tag {
-  color: $white;
-  z-index: 200;
-}
-
-.mySwiper .card {
-  .name-tag {
-    display: none;
-  }
-  &:hover .name-tag {
-    display: block;
+    .card-img-start {
+      height: 150px;
+      object-fit: cover;
+      object-position: left;
+      overflow: hidden;
+    }
   }
 }
 .card-img {
@@ -99,6 +106,29 @@
   height: 302px;
   border-radius: 12px;
 }
+.card-img-start {
+  width: 100%;
+  object-position: left;
+  height: 302px;
+  border-radius: 12px;
+}
+.name-tag {
+  color: $white;
+  z-index: 200;
+}
+
+.card {
+  .name-tag {
+    display: none;
+  }
+  &:hover .name-tag {
+    display: block;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 // 漸層用偽元素避免跟stretched-link衝突
 .card-img-wrapper {
   position: relative;
@@ -123,6 +153,12 @@
 }
 .card:hover .card-img-wrapper::after {
   opacity: 1;
+  @media (max-width: 768px) {
+    // 手機版隱藏overlay
+    & {
+      opacity: 0;
+    }
+  }
 }
 
 .card .inCardBtnGroup {
@@ -135,6 +171,16 @@
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+.card-body {
+  padding: 12px;
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
+  .card-title {
+    margin-bottom: 4px;
+    color: var(--bs-card-title-color);
+  }
+}
 
 // CTA
 // creator cta
@@ -146,7 +192,6 @@
   background-size: fill;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
   transition: background-color 0.3s, transform 0.3s;
   overflow: hidden;
   &::before {
@@ -172,7 +217,7 @@
   left: 10%;
   z-index: 5;
   @media (max-width: 992px) {
-    position: static;
+    left: 5%;
   }
 }
 .cta-img {
@@ -184,8 +229,73 @@
   }
 }
 
+// 要修改+手機版動畫
+@media (max-width: 992px) {
+  .c-cta {
+    margin-left: -12px;
+    margin-right: -12px;
+    width: calc(100% + 24px);
+    height: auto;
+    padding: 0;
+    background-color: $secondary-100;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      background-color: $accent;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 1s;
+      border-radius: 100%;
+    }
+    &:hover::before {
+      transform: translate(-50%, -50%) scale(100);
+    }
+  }
+  .cta-text {
+    position: static;
+    width: 100%;
+    transform: none;
+    padding: 24px 40px;
+    z-index: 1;
+  }
+
+  .cta-img {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    object-position: center;
+    padding-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      position: static;
+      object-position: bottom;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .c-cta {
+    margin-left: -12px;
+    margin-right: -12px;
+    width: calc(100% + 24px);
+    border-radius: 0;
+  }
+  .cta-img img {
+    position: static;
+    width: 100%;
+    max-width: 304px;
+    height: auto;
+  }
+}
 .join-btn {
-  @include icon-size(12px, 24px, 16px, 200px);
+  @include icon-size(12px, 24px, 16px, 270px);
   @include icon-color;
   @include icon-border;
   &:hover {
@@ -196,6 +306,17 @@
     @include icon-color;
     @include icon-border($primary-800);
     box-shadow: 0px 0px 0px 2px $primary-50;
+  }
+  @media (max-width: 576px) {
+    display: inline-block;
+    @include icon-size(8px, 16px, 12px, 295px);
+    width: 100%;
+  }
+  &:disabled {
+    @include disabled-style;
+    &:hover {
+      background-color: rgba($primary-600, 100%);
+    }
   }
 }
 
@@ -208,7 +329,7 @@
   background-repeat: no-repeat;
   border-radius: 20px;
   overflow: hidden;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     background-image: url(/assets/images/Homepage/section-3-mob.png);
   }
 }

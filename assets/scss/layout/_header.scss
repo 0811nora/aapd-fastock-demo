@@ -495,6 +495,9 @@ header .form-check-input:valid:checked,
 }
 
 // login offcanvas
+header .offcanvas {
+  z-index: 1070 !important;
+}
 header .offcanvas-bottom {
   padding: 16px 24px;
   border-top-left-radius: 16px;

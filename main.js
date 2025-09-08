@@ -212,3 +212,38 @@ mobForm.addEventListener("input", () => {
     false
   );
 })();
+
+// 啟用購物車
+// 選擇所有的「加入購物車」按鈕
+const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+// 選擇所有的購物車按鈕（電腦版和手機版）
+const cartButtons = document.querySelectorAll(".cart-btn");
+
+// 購物車總商品數
+let itemCount = 0;
+
+// 監聽所有「加入購物車」按鈕的點擊事件
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    itemCount++;
+    updateCartState();
+  });
+});
+
+function updateCartState() {
+  cartButtons.forEach((cartBtn) => {
+    if (itemCount > 0) {
+      cartBtn.classList.add("cart-active");
+      cartBtn.classList.remove("cart-disabled");
+    } else {
+      cartBtn.classList.add("cart-disabled");
+      cartBtn.classList.remove("cart-active");
+    }
+  });
+}
+
+// 頁面載入時先初始化購物車狀態
+window.addEventListener("load", () => {
+  updateCartState();
+});

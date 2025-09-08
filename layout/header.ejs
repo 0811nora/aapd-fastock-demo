@@ -132,11 +132,16 @@
           <!-- 連結結帳modal -->
           <button
             type="button"
-            class="d-none d-md-flex icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-none d-md-flex icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="modal"
             data-bs-target="#headerPcCheckout"
           >
             <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+            <img
+              src="/assets/images/icon/icon-cart-badge.svg"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <!-- 電腦版結帳modal -->
           <div
@@ -349,12 +354,17 @@
           <!-- 手機板結帳offcanvas -->
           <button
             type="button"
-            class="d-md-none icon-S icon-secondary-outline position-relative"
+            class="cart-btn cart-disabled d-md-none icon-S icon-secondary-outline position-relative header-cart-btn"
             data-bs-toggle="offcanvas"
             data-bs-target="#headerMobCheckout"
             aria-controls="offcanvasBottom"
           >
             <img src="/assets/images/icon/icon-cart-outline.svg" alt="cart" />
+            <img
+              src="/assets/images/icon/icon-cart-badge.svg"
+              alt="cart-add"
+              class="cart-badge-img"
+            />
           </button>
           <div
             class="d-md-none offcanvas offcanvas-bottom"

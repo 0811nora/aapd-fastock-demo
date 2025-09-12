@@ -224,6 +224,70 @@ header ul.dropdown-menu.show {
   display: inline-block;
 }
 
+.input-divider {
+  width: calc(100% - 16px);
+  height: 2px;
+  background-color: $secondary-400;
+  margin: 12px 8px;
+}
+
+.search-reco {
+  position: absolute;
+  width: calc(100% - 76px);
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 1800;
+}
+.search-reco ul {
+  margin-bottom: 0;
+  li {
+    padding: 4px 8px;
+    &:hover {
+      background-color: $neutral-100;
+    }
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+    }
+  }
+}
+
+.search-mob-reco {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  z-index: 1800;
+}
+.search-mob-reco ul {
+  margin-bottom: 0;
+  li {
+    padding: 4px 8px;
+    &:hover {
+      background-color: $neutral-100;
+    }
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+    }
+  }
+}
+
+header .input-group.search-dropdown .search-bar:focus {
+  ~ .search-reco {
+    display: block;
+  }
+  .search-mob-reco {
+    display: block;
+  }
+}
+
 // login btn
 header .nav-login-btn {
   @include icon-size(
@@ -444,14 +508,6 @@ header .was-validated .form-check-input:valid ~ .form-check-label,
   color: $black;
 }
 
-// 信用卡旁的打勾位置
-header .was-validated .form-control#cardNumberInput:valid,
-.form-control#cardNumberInput.is-valid,
-header .was-validated .form-control#mobCardNumberInput:valid,
-.form-control#mobCardNumberInput.is-valid {
-  background-position: right calc(0.375em + 0.1875rem + 2rem) center;
-}
-
 // 突出購物車icon
 .header-cart-btn.cart-active {
   z-index: 1060 !important;
@@ -483,7 +539,20 @@ header .was-validated .form-control#mobCardNumberInput:valid,
   display: block;
 }
 
-// 結帳checkbox 打勾樣式
+// 信用卡旁的打勾位置
+.was-validated .form-control#cardNumberInput:valid,
+.form-control#cardNumberInput.is-valid
+  .was-validated
+  .form-control#mobCardNumberInput:valid,
+.form-control#mobCardNumberInput.is-valid {
+  border-color: var(--bs-form-valid-border-color);
+  padding-right: calc(1.5em + 0.75rem + 16px);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='green' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.35em + 0.1875rem + 1.75rem) center;
+  background-size: calc(0.7em + 0.375rem) calc(0.7em + 0.375rem);
+}
+
 header .form-check-input:valid:checked,
 .form-check-input.is-valid:checked {
   background-color: $primary;
@@ -737,4 +806,11 @@ header .navbar-toggler {
     margin-left: 16px;
     margin-right: 16px;
   }
+}
+
+.offcanvas-divider {
+  width: calc(100% - 32px);
+  height: 2px;
+  background-color: $secondary-400;
+  margin: 16px;
 }

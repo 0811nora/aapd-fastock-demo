@@ -279,10 +279,15 @@ header ul.dropdown-menu.show {
   }
 }
 
-header .input-group.search-dropdown .search-bar:focus {
-  ~ .search-reco {
+// pc版
+header .input-group.search-dropdown {
+  .search-bar:focus ~ .search-reco,
+  .search-reco:hover {
     display: block;
   }
+}
+// 手機板
+header .input-group.search-dropdown:focus-within {
   .search-mob-reco {
     display: block;
   }

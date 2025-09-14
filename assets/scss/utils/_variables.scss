@@ -517,7 +517,9 @@ $enable-grid-classes: true !default;
 $enable-container-classes: true !default;
 $enable-cssgrid: false !default;
 $enable-button-pointers: true !default;
-$enable-rfs: true !default;
+$enable-rfs: false !default;
+// $enable-rfs: true !default;
+$rfs-class: disable; // 生成 .disable-responsive-font-size 這個關閉用 class
 $enable-validation-icons: true !default;
 $enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
@@ -849,6 +851,7 @@ $font-sizes: (
   5: $h5-font-size,
   // 24
   6: $h6-font-size,
+  // 22
 ) !default;
 // scss-docs-end font-sizes
 

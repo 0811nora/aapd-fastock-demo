@@ -19,90 +19,95 @@
     <div class="product-list-banner pt-12 text-center">
       <h3 class="mb-2 h4 text-white">相片</h3>
       <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
-
       <div
-        class="pd-list-container d-flex justify-content-start justify-content-md-center searchteag px-4 px-lg-12"
-        id="bannerTags"
-        role="group"
-        aria-label="快速篩選標籤"
+        class="pd-list-container d-flex justify-content-start justify-content-md-center"
       >
-        <button
-          type="button"
-          class="lil-btn pl-banner-btn tag-btn me-3 me-lg-4"
-          data-tag="背景"
-          aria-pressed="false"
+        <div
+          class="searchteag px-12"
+          id="bannerTags"
+          role="group"
+          aria-label="快速篩選標籤"
         >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />背景
-        </button>
-        <button
-          type="button"
-          class="lil-btn pl-banner-btn tag-btn me-3 me-lg-4"
-          data-tag="壁紙"
-          aria-pressed="false"
-        >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />壁紙
-        </button>
-        <button
-          type="button"
-          class="lil-btn pl-banner-btn tag-btn me-3 me-lg-4"
-          data-tag="風景"
-          aria-pressed="false"
-        >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />風景
-        </button>
-        <button
-          type="button"
-          class="lil-btn pl-banner-btn tag-btn me-3 me-lg-4"
-          data-tag="商業"
-          aria-pressed="false"
-        >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />商業
-        </button>
-        <button
-          type="button"
-          style="min-width: 120px; max-width: 120px"
-          class="lil-btn pl-banner-btn tag-btn me-3 me-lg-4"
-          data-tag="室內設計"
-          aria-pressed="false"
-        >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />室內設計
-        </button>
-        <button
-          type="button"
-          class="lil-btn pl-banner-btn tag-btn me-3 me-lg-4"
-          data-tag="動物"
-          aria-pressed="false"
-        >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />動物
-        </button>
-        <button
-          type="button"
-          class="lil-btn pl-banner-btn tag-btn"
-          data-tag="城市"
-          aria-pressed="false"
-        >
-          <img src="/assets/images/icon/icon-search-white.svg" alt="" />城市
-        </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn me-4"
+            data-tag="背景"
+            aria-pressed="false"
+          >
+            <img src="/assets/images/icon/icon-search-white.svg" alt="" />背景
+          </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn me-4"
+            data-tag="壁紙"
+            aria-pressed="false"
+          >
+            <img src="/assets/images/icon/icon-search-white.svg" alt="" />壁紙
+          </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn me-4"
+            data-tag="風景"
+            aria-pressed="false"
+          >
+            <img src="/assets/images/icon/icon-search-white.svg" alt="" />風景
+          </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn me-4"
+            data-tag="商業"
+            aria-pressed="false"
+          >
+            <img src="/assets/images/icon/icon-search-white.svg" alt="" />商業
+          </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn me-4"
+            data-tag="室內設計"
+            aria-pressed="false"
+          >
+            <img
+              src="/assets/images/icon/icon-search-white.svg"
+              alt=""
+            />室內設計
+          </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn me-4"
+            data-tag="動物"
+            aria-pressed="false"
+          >
+            <img src="/assets/images/icon/icon-search-white.svg" alt="" />動物
+          </button>
+          <button
+            type="button"
+            class="lil-btn border-radius-999 border border-neutral-300 pl-banner-btn tag-btn"
+            data-tag="城市"
+            aria-pressed="false"
+          >
+            <img src="/assets/images/icon/icon-search-white.svg" alt="" />城市
+          </button>
+        </div>
       </div>
     </div>
     <div class="pd-list-container layout py-8 px-12 px-md-4">
       <div class="d-flex">
-        <label for="toggleFilter" class="btn btn-sec-noline me-auto">
-          <img src="/assets/images/icon/icon-filter.svg" alt="" />隱藏篩選器
-        </label>
+        <label for="toggleFilter" class="btn btn-sec-noline me-auto"
+          ><img
+            src="/assets/images/icon/icon-filter.svg"
+            alt=""
+          />隱藏篩選器</label
+        >
         <input type="checkbox" id="toggleFilter" />
         <label
-          for="newestFilter"
+          for="#"
           class="btn btn-sec-noline text-secondary-800 pd-list-dropdown"
-        >
-          按<span class="text-black">最新</span>排序<img
+          >按<span class="text-black">最新</span>排序<img
             src="/assets/images/icon/icon-down.svg"
             alt=""
-          />
-        </label>
+        /></label>
         <input type="checkbox" id="newestFilter" />
       </div>
-
       <div class="row-pd-list">
         <!-- 篩選器區 -->
         <div
@@ -121,7 +126,7 @@
                   name="tag-filter"
                   value="tag-pink"
                 />
-                <label class="form-check-label mb-3" for="filter-promo"
+                <label class="form-check-label mb-3" for="cat-photo"
                   >促銷</label
                 >
               </div>
@@ -133,7 +138,7 @@
                   name="tag-filter"
                   value="tag-yellow"
                 />
-                <label class="form-check-label mb-3" for="filter-popular"
+                <label class="form-check-label mb-3" for="cat-template"
                   >人氣</label
                 >
               </div>
@@ -145,52 +150,54 @@
                   name="tag-filter"
                   value="tag-blue"
                 />
-                <label class="form-check-label" for="filter-free"
+                <label class="form-check-label" for="cat-template"
                   >每週免費</label
                 >
               </div>
             </fieldset>
-
             <fieldset class="border-bottom px-6 py-4">
               <legend class="fs-md fw-medium">人數</legend>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="0people"
-                  id="people-0"
+                  value="photo"
+                  id="cat-photo"
                 />
-                <label class="form-check-label mb-3" for="people-0">0人</label>
+                <label class="form-check-label mb-3" for="cat-photo">0人</label>
               </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="1people"
-                  id="people-1"
+                  value="template"
+                  id="cat-template"
                 />
-                <label class="form-check-label mb-3" for="people-1">1人</label>
+                <label class="form-check-label mb-3" for="cat-template"
+                  >1人</label
+                >
               </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="2people"
-                  id="people-2"
+                  value="template"
+                  id="cat-template"
                 />
-                <label class="form-check-label mb-3" for="people-2">2人</label>
+                <label class="form-check-label mb-3" for="cat-template"
+                  >2人</label
+                >
               </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="3+people"
-                  id="people-3plus"
+                  value="template"
+                  id="cat-template"
                 />
-                <label class="form-check-label" for="people-3plus">3+人</label>
+                <label class="form-check-label" for="cat-template">3+人</label>
               </div>
             </fieldset>
-
             <fieldset class="border-bottom px-6 py-4">
               <legend class="fs-md fw-medium mb-2">顏色</legend>
               <div class="d-flex flex-wrap gap-2">
@@ -210,7 +217,6 @@
                 <span class="color-dot" style="--c: #9e9e9e"></span>
               </div>
             </fieldset>
-
             <fieldset class="px-6 py-4">
               <legend class="fs-md fw-medium">比例</legend>
               <div
@@ -220,16 +226,16 @@
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="vertical"
+                  value="photo"
                   id="vertical"
                 />
-                <label class="form-check-label fw-medium" for="vertical">
-                  <img
+                <label class="form-check-label fw-medium" for="cat-photo"
+                  ><img
                     class="pe-1"
                     src="/assets/images/icon/icon-vertical.svg"
                     alt=""
-                  />垂直
-                </label>
+                  />垂直</label
+                >
               </div>
               <div
                 class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
@@ -238,16 +244,16 @@
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="horizontal"
+                  value="template"
                   id="horizontal"
                 />
-                <label class="form-check-label fw-medium" for="horizontal">
-                  <img
+                <label class="form-check-label fw-medium" for="cat-template"
+                  ><img
                     class="pe-1"
                     src="/assets/images/icon/icon-horizontal.svg"
                     alt=""
-                  />水平
-                </label>
+                  />水平</label
+                >
               </div>
               <div
                 class="form-check border border-secondary-700 d-flex py-3 rounded-3"
@@ -256,16 +262,16 @@
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  value="square"
-                  id="square"
+                  value="template"
+                  id="icon-square"
                 />
-                <label class="form-check-label fw-medium" for="square">
-                  <img
+                <label class="form-check-label fw-medium" for="cat-template"
+                  ><img
                     class="pe-1"
                     src="/assets/images/icon/icon-square.svg"
                     alt=""
-                  />正方
-                </label>
+                  />正方</label
+                >
               </div>
             </fieldset>
           </form>

@@ -5,20 +5,19 @@
 }
 
 .pd-list-sidebar {
-
   @include size-sm {
     display: none;
   }
 }
 
 .pd-list-cardbox {
-  @include size-sm {}
+  @include size-sm {
+  }
 }
 
 .product-list-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    /* 黑色 40% 疊層 */
-    url("/assets/images/產品列表頁/banner.png");
+    /* 黑色 40% 疊層 */ url("/assets/images/產品列表頁/banner.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -49,14 +48,12 @@
     justify-content: space-around;
     align-items: center;
   }
-
 }
 
 .pd-list-content {
-  @include size-sm {}
+  @include size-sm {
+  }
 }
-
-
 
 .pl-banner-btn {
   color: $white;

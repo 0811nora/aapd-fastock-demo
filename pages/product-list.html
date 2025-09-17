@@ -16,7 +16,8 @@
   <body>
     <%- include('./layout/header'); -%> <%-
     include('./layout/scroll-top-btn.ejs'); -%>
-    <div class="product-list-banner pt-12 text-center">
+
+    <!-- <div class="product-list-banner pt-12 text-center">
       <h3 class="mb-2 h4 text-white">相片</h3>
       <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
       <div
@@ -89,6 +90,78 @@
           </button>
         </div>
       </div>
+    </div> -->
+
+    <!-- banner -->
+    <div class="pl_banner-spacing text-center">
+      <h3 class="mb-2 fs-5 fs-md-4 fw-bold text-white">相片</h3>
+      <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
+      <!-- 標籤按鈕 -->
+      <div class="px-4 px-lg-12 d-flex flex-wrap gap-3 gap-lg-4">
+        <button type="button" class="pl_tag-btn">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />背景</span
+          >
+        </button>
+        <button type="button" class="pl_tag-btn">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />壁紙</span
+          >
+        </button>
+        <button type="button" class="pl_tag-btn">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />風景</span
+          >
+        </button>
+        <button type="button" class="pl_tag-btn">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />商業</span
+          >
+        </button>
+        <button type="button" class="pl_tag-btn pl_tag-btn-120">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />室內設計</span
+          >
+        </button>
+        <button type="button" class="pl_tag-btn">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />動物</span
+          >
+        </button>
+        <button type="button" class="pl_tag-btn">
+          <span style="z-index: 3"
+            ><img
+              class="me-1"
+              src="/assets/images/icon/icon-search-white.svg"
+              alt="search-white"
+            />城市</span
+          >
+        </button>
+      </div>
     </div>
     <div class="pd-list-container layout py-8 px-12 px-md-4">
       <div class="d-flex">
@@ -99,14 +172,40 @@
           />隱藏篩選器</label
         >
         <input type="checkbox" id="toggleFilter" />
-        <label
-          for="#"
-          class="btn btn-sec-noline text-secondary-800 pd-list-dropdown"
-          >按<span class="text-black">最新</span>排序<img
-            src="/assets/images/icon/icon-down.svg"
-            alt=""
-        /></label>
-        <input type="checkbox" id="newestFilter" />
+        <div class="dropdown">
+          <button
+            class="btn btn-sec-noline text-secondary-800 pd-list-dropdown dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            按<span class="text-black">最新</span>排序<img
+              src="/assets/images/icon/icon-down.svg"
+              alt=""
+            />
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton1"
+          >
+            <li>
+              <a class="dropdown-item" href="#"
+                >按<span class="text-black">最新</span>排序</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >按<span class="text-black">價格 - 低至高</span>排序</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >按<span class="text-black">價格 - 高至低</span>排序</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="row-pd-list">
         <!-- 篩選器區 -->

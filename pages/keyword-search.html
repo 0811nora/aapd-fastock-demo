@@ -20,8 +20,8 @@
   <body>
     <%- include('./layout/header'); -%>
     <section class="container-fluid bg-primary-50 px-4 py-4 py-lg-8 px-lg-12">
-      <h3 class="h4 mb-2">
-        <span class="h4 bg-accent-400">貓</span>相關的素材資源
+      <h3 class="fs-5 fs-md-4 mb-2">
+        <span class="fs-5 fs-md-4 bg-accent-400 me-1">貓</span>相關的素材資源
       </h3>
       <p class="fs-lg text-neutral-600 mb-8">
         瀏覽我們的素材庫，您將發現許多精彩的免版稅商業照片、圖片與影像。我們相信您一定能找到最適合您專案的素材！
@@ -113,24 +113,24 @@
         </button>
       </div>
     </section>
-    <main class="container px-4 px-md-12 py-4 py-lg-8 mx-auto">
+    <main class="container-fluid pt-7 pt-lg-8 pb-4 pb-lg-8 px-0 px-lg-12">
       <!-- 類別swiper -->
-      <div class="container px-0 my-md-3">
+      <div class="container px-0 px-lg-0 mb-7 mb-lg-6">
         <div
-          class="swiper-header d-flex justify-content-between align-items-center mb-3"
+          class="swiper-header d-flex justify-content-between align-items-center mb-5 px-4 px-md-0"
         >
-          <h3 class="fs-5 fw-bold">以類別搜尋</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">以類別搜尋</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
-              class="my-prev-btn icon-secondary-outline icon-S d-none d-md-flex"
+              class="my-prev-btn icon-secondary-outline icon-S k-icon-size"
               id="my-prev"
             >
               <img src="/assets/images/icon/icon-left.svg" alt="icon-left" />
             </button>
             <button
               type="button"
-              class="my-next-btn icon-secondary-outline icon-S d-none d-md-flex"
+              class="my-next-btn icon-secondary-outline icon-S k-icon-size"
               id="my-next"
             >
               <img src="/assets/images/icon/icon-right.svg" alt="icon-right" />
@@ -143,7 +143,7 @@
             >
           </div>
         </div>
-        <div class="swiper myCSwiper">
+        <div class="swiper myCSwiper px-4">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card position-relative">
@@ -290,7 +290,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide k-slide-breakout">
               <div class="card position-relative">
                 <!-- 卡片圖片區 -->
                 <div class="card-img-wrapper overflow-hidden rounded-4">
@@ -324,11 +324,11 @@
       </div>
 
       <!-- 字型 swiper -->
-      <section class="container px-0 my-md-3">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">字型</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">字型</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -479,11 +479,11 @@
         </div>
       </section>
       <!-- 範本swiper -->
-      <section class="container px-0 my-md-3">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">範本</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">範本</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -634,11 +634,11 @@
         </div>
       </section>
       <!-- 主題swiper -->
-      <section class="container px-0 my-md-3">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">主題</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">主題</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -789,11 +789,11 @@
         </div>
       </section>
       <!-- 圖形swiper -->
-      <section class="container px-0 my-md-3">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">圖形</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">圖形</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -950,11 +950,11 @@
         </div>
       </section>
       <!-- 相片swiper -->
-      <section class="container px-0 my-md-3">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">相片</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">相片</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -1105,11 +1105,11 @@
         </div>
       </section>
       <!-- 影片swiper -->
-      <section class="container px-0 my-md-3 d-none d-md-block">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8 d-none d-md-block">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">影片</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">影片</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -1244,11 +1244,11 @@
         </div>
       </section>
       <!-- 音效swiper -->
-      <section class="container px-0 my-md-3 d-none d-md-block">
+      <section class="container px-4 px-lg-0 mb-7 mb-lg-8 d-none d-md-block">
         <div
           class="swiper-header d-flex justify-content-between align-items-center"
         >
-          <h3 class="fs-5 fw-bold">音效</h3>
+          <h3 class="fs-6 fs-md-5 fw-bold">音效</h3>
           <div class="swiper-nav d-flex align-items-center gap-2">
             <button
               type="button"
@@ -1452,10 +1452,21 @@
           </div>
         </div>
       </section>
+      <div class="d-flex justify-content-center my-0 my-md-6">
+        <a
+          href="./product-list.html"
+          role="button"
+          class="d-none d-md-block btn btn-sec-outline fs-md fw-medium letter-spacing-sm py-3 px-6 rounded-5"
+          >查看更多</a
+        >
+        <a
+          href="./product-list.html"
+          role="button"
+          class="d-md-none btn-sm btn-sec-outline fs-sm fw-medium letter-spacing-sm py-2 px-4 rounded-4"
+          >查看更多</a
+        >
+      </div>
     </main>
-    <div class="more-btn d-flex justify-content-center align-items-center py-6">
-      <div class="btn btn-sec-outline" style="font-weight: 500">查看更多</div>
-    </div>
 
     <%- include('./layout/scroll-top-btn.ejs'); -%> <%-
     include('./layout/footer'); -%>
@@ -1480,7 +1491,7 @@
           breakpoints: {
             // 手機版
             375: {
-              slidesPerView: 2.2,
+              slidesPerView: 2.15,
               spaceBetween: 12,
             },
             576: {
@@ -1494,7 +1505,7 @@
             },
             // 電腦版
             992: {
-              slidesPerView: 5.5,
+              slidesPerView: 5.55,
               spaceBetween: 12,
             },
           },

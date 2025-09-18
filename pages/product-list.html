@@ -163,9 +163,9 @@
         </button>
       </div>
     </div>
-    <div class="pd-list-container layout py-8 px-12 px-md-4">
-      <div class="d-flex">
-        <label for="toggleFilter" class="btn btn-sec-noline me-auto"
+    <div class="pd-list-container layout py-8 px-md-12 px-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <label for="toggleFilter" class="btn btn-sec-noline"
           ><img
             src="/assets/images/icon/icon-filter.svg"
             alt=""
@@ -174,34 +174,34 @@
         <input type="checkbox" id="toggleFilter" />
         <div class="dropdown">
           <button
-            class="btn btn-sec-noline text-secondary-800 pd-list-dropdown dropdown-toggle"
+            class="btn btn-sec-noline text-secondary-800 pd-list-dropdown dropdown-toggle py-0 mb-6"
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            按<span class="text-black">最新</span>排序<img
-              src="/assets/images/icon/icon-down.svg"
-              alt=""
-            />
+            按<span class="text-black">最新</span><span class="me-1">排序</span>
           </button>
           <ul
-            class="dropdown-menu dropdown-menu-end"
+            class="dropdown-menu dropdown-menu-end py-3 px-2 mt-7p"
             aria-labelledby="dropdownMenuButton1"
           >
             <li>
-              <a class="dropdown-item" href="#"
-                >按<span class="text-black">最新</span>排序</a
+              <a
+                class="dropdown-item py-1 px-2 d-flex justify-content-between align-items-center"
+                href="#"
+                ><span class="text-black">最新</span
+                ><img src="/assets/images/icon/icon-tick.svg" alt="icon-check"
+              /></a>
+            </li>
+            <li>
+              <a class="dropdown-item py-1 px-2" href="#"
+                ><span class="text-black">價格 - 低至高</span></a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="#"
-                >按<span class="text-black">價格 - 低至高</span>排序</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"
-                >按<span class="text-black">價格 - 高至低</span>排序</a
+              <a class="dropdown-item py-1 px-2" href="#"
+                ><span class="text-black">價格 - 高至低</span></a
               >
             </li>
           </ul>

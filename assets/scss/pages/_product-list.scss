@@ -11,13 +11,13 @@
 }
 
 .pd-list-cardbox {
-  @include size-sm {
-  }
+  @include size-sm {}
 }
 
 .product-list-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    /* 黑色 40% 疊層 */ url("/assets/images/產品列表頁/banner.png");
+    /* 黑色 40% 疊層 */
+    url("/assets/images/產品列表頁/banner.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -48,6 +48,7 @@
     justify-content: space-around;
     align-items: center;
   }
+
   @media (max-width: 576px) {
     display: flex;
     flex-wrap: wrap;
@@ -57,8 +58,7 @@
 }
 
 .pd-list-content {
-  @include size-sm {
-  }
+  @include size-sm {}
 }
 
 .pl-banner-btn {
@@ -190,6 +190,7 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+
   @media (max-width: 768px) {
     height: 320px;
     padding-top: 96px;
@@ -207,15 +208,15 @@
   position: relative;
   @include overlay-style($overlay-bgc: rgba(0, 0, 0, 0.1));
   overflow: hidden;
+
   @media (max-width: 768px) {
-    @include icon-size(
-      $py-sz: 4px,
+    @include icon-size($py-sz: 4px,
       $px-sz: 8px,
       $bdrs-sz: 9999px,
       $w-sz: 72px,
-      $h-sz: 36px
-    );
+      $h-sz: 36px);
     font-size: 14px;
+
     span {
       display: flex;
       align-items: center;
@@ -225,10 +226,12 @@
 
 .pl_tag-btn-120 {
   width: 120px;
+
   @media (max-width: 768px) {
     width: 100px;
   }
 }
+
 .pd-list-container .dropdown-toggle::after {
   display: none;
 }
@@ -237,6 +240,7 @@
   &::after {
     display: none;
   }
+
   padding-right: 32px;
   position: relative;
 
@@ -266,24 +270,42 @@
 
 .pd-list-cardbox {
   width: 100%;
+
   .card {
     width: 100%;
     max-width: 302px;
     height: 377px;
+
     @media (max-width: 576px) {
       width: 100%;
       max-width: 165px;
       height: 214px;
     }
   }
+
   .card-img {
     width: 100%;
     height: 302px;
     border-radius: 12px;
+
     @media (max-width: 576px) {
       width: 100%;
       height: 150px;
       height: 214px;
     }
+  }
+}
+
+//緊急修正
+.style-px {
+  width: 304px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width:576px) {
+  .style-px {
+    width: 165px !important;
+    height: 165px !important;
   }
 }

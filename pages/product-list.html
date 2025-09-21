@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/images/logo icon.svg"
-    />
-    <title>相片 | 快素 Fastock</title>
-  </head>
 
-  <body>
-    <%- include('./layout/header'); -%> <%-
-    include('./layout/scroll-top-btn.ejs'); -%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo icon.svg" />
+  <title>相片 | 快素 Fastock</title>
+</head>
 
-    <!-- <div class="product-list-banner pt-12 text-center">
+<body>
+  <%- include('./layout/header'); -%> <%- include('./layout/scroll-top-btn.ejs'); -%>
+
+      <!-- <div class="product-list-banner pt-12 text-center">
       <h3 class="mb-2 h4 text-white">相片</h3>
       <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
       <div
@@ -92,921 +87,698 @@
       </div>
     </div> -->
 
-    <!-- banner -->
-    <div class="pl_banner-spacing text-center">
-      <h3 class="mb-2 fs-5 fs-md-4 fw-bold text-white">相片</h3>
-      <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
-      <!-- 標籤按鈕 -->
-      <div class="px-4 px-lg-12 d-flex flex-wrap gap-3 gap-lg-4">
-        <button type="button" class="pl_tag-btn">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />背景</span
-          >
-        </button>
-        <button type="button" class="pl_tag-btn">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />壁紙</span
-          >
-        </button>
-        <button type="button" class="pl_tag-btn">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />風景</span
-          >
-        </button>
-        <button type="button" class="pl_tag-btn">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />商業</span
-          >
-        </button>
-        <button type="button" class="pl_tag-btn pl_tag-btn-120">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />室內設計</span
-          >
-        </button>
-        <button type="button" class="pl_tag-btn">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />動物</span
-          >
-        </button>
-        <button type="button" class="pl_tag-btn">
-          <span style="z-index: 3"
-            ><img
-              class="me-1"
-              src="/assets/images/icon/icon-search-white.svg"
-              alt="search-white"
-            />城市</span
-          >
-        </button>
-      </div>
-    </div>
-    <div class="pd-list-container layout py-8 px-md-12 px-4">
-      <div class="d-flex justify-content-between align-items-center">
-        <label for="toggleFilter" class="btn btn-sec-noline"
-          ><img
-            src="/assets/images/icon/icon-filter.svg"
-            alt=""
-          />隱藏篩選器</label
-        >
-        <input type="checkbox" id="toggleFilter" />
-        <div class="dropdown">
-          <button
-            class="btn btn-sec-noline text-secondary-800 pd-list-dropdown dropdown-toggle py-0 mb-md-6 mb-0"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            按<span class="text-black">最新</span><span class="me-1">排序</span>
+      <!-- banner -->
+      <div class="pl_banner-spacing text-center">
+        <h3 class="mb-2 fs-5 fs-md-4 fw-bold text-white">相片</h3>
+        <p class="fs-lg text-white mb-8">全網最豐富的照片庫盡收眼底</p>
+        <!-- 標籤按鈕 -->
+        <div class="px-4 px-lg-12 d-flex flex-wrap gap-3 gap-lg-4">
+          <button type="button" class="pl_tag-btn">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />背景</span>
           </button>
-          <ul
-            class="dropdown-menu dropdown-menu-end py-3 px-2 mt-7p"
-            aria-labelledby="dropdownMenuButton1"
-          >
-            <li>
-              <a
-                class="dropdown-item py-1 px-2 d-flex justify-content-between align-items-center"
-                href="#"
-                ><span class="text-black">最新</span
-                ><img src="/assets/images/icon/icon-tick.svg" alt="icon-check"
-              /></a>
-            </li>
-            <li>
-              <a class="dropdown-item py-1 px-2" href="#"
-                ><span class="text-black">價格 - 低至高</span></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item py-1 px-2" href="#"
-                ><span class="text-black">價格 - 高至低</span></a
-              >
-            </li>
-          </ul>
+          <button type="button" class="pl_tag-btn">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />壁紙</span>
+          </button>
+          <button type="button" class="pl_tag-btn">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />風景</span>
+          </button>
+          <button type="button" class="pl_tag-btn">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />商業</span>
+          </button>
+          <button type="button" class="pl_tag-btn pl_tag-btn-120">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />室內設計</span>
+          </button>
+          <button type="button" class="pl_tag-btn">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />動物</span>
+          </button>
+          <button type="button" class="pl_tag-btn">
+            <span style="z-index: 3"><img class="me-1" src="/assets/images/icon/icon-search-white.svg"
+                alt="search-white" />城市</span>
+          </button>
         </div>
       </div>
-      <div class="row-pd-list">
-        <!-- 篩選器區 -->
-        <div
-          id="filter-panel"
-          class="pd-list-sidebar me-12 sidebar align-self-start"
-        >
-          <form class="vstack">
-            <fieldset class="border-top border-bottom px-6 py-4">
-              <legend class="fs-6 d-none">類別</legend>
-              <!-- 促銷 → tag-yellow -->
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="filter-promo"
-                  name="tag-filter"
-                  value="tag-pink"
-                />
-                <label class="form-check-label mb-3 ps-1" for="cat-photo"
-                  >促銷</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="filter-popular"
-                  name="tag-filter"
-                  value="tag-yellow"
-                />
-                <label class="form-check-label mb-3 ps-1" for="cat-template"
-                  >人氣</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="filter-free"
-                  name="tag-filter"
-                  value="tag-blue"
-                />
-                <label class="form-check-label ps-1" for="cat-template"
-                  >每週免費</label
-                >
-              </div>
-            </fieldset>
-            <fieldset class="border-bottom px-6 py-4">
-              <legend class="fs-md fw-medium">人數</legend>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="photo"
-                  id="cat-photo"
-                />
-                <label class="form-check-label mb-3 ps-1" for="cat-photo"
-                  >0人</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="template"
-                  id="cat-template"
-                />
-                <label class="form-check-label mb-3 ps-1" for="cat-template"
-                  >1人</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="template"
-                  id="cat-template"
-                />
-                <label class="form-check-label mb-3 ps-1" for="cat-template"
-                  >2人</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="template"
-                  id="cat-template"
-                />
-                <label class="form-check-label ps-1" for="cat-template"
-                  >3+人</label
-                >
-              </div>
-            </fieldset>
-            <fieldset class="border-bottom px-6 py-4">
-              <legend class="fs-md fw-medium mb-2">顏色</legend>
-              <div class="d-flex flex-wrap gap-2">
-                <span class="color-dot" style="--c: #f44336"></span>
-                <span
-                  class="color-dot"
-                  style="--c: #ff9800; border-color: #eee; opacity: 0.4"
-                ></span>
-                <span class="color-dot" style="--c: #ffeb3b"></span>
-                <span class="color-dot" style="--c: #795548"></span>
-                <span class="color-dot" style="--c: #4caf50"></span>
-                <span class="color-dot" style="--c: #9c27b0"></span>
-                <span class="color-dot" style="--c: #2196f3"></span>
-                <span class="color-dot" style="--c: #e91e63"></span>
-                <span class="color-dot" style="--c: #000000"></span>
-                <span class="color-dot" style="--c: #ffffff"></span>
-                <span class="color-dot" style="--c: #9e9e9e"></span>
-              </div>
-            </fieldset>
-            <fieldset class="px-6 py-4">
-              <legend class="fs-md fw-medium">比例</legend>
-              <div
-                class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
-                style="place-content: center; padding-left: 0px"
-              >
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="photo"
-                  id="vertical"
-                />
-                <label class="form-check-label fw-medium" for="cat-photo"
-                  ><img
-                    class="pe-1"
-                    src="/assets/images/icon/icon-vertical.svg"
-                    alt=""
-                  />垂直</label
-                >
-              </div>
-              <div
-                class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
-                style="place-content: center; padding-left: 0px"
-              >
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="template"
-                  id="horizontal"
-                />
-                <label class="form-check-label fw-medium" for="cat-template"
-                  ><img
-                    class="pe-1"
-                    src="/assets/images/icon/icon-horizontal.svg"
-                    alt=""
-                  />水平</label
-                >
-              </div>
-              <div
-                class="form-check border border-secondary-700 d-flex py-3 rounded-3"
-                style="place-content: center; padding-left: 0px"
-              >
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="template"
-                  id="icon-square"
-                />
-                <label class="form-check-label fw-medium" for="cat-template"
-                  ><img
-                    class="pe-1"
-                    src="/assets/images/icon/icon-square.svg"
-                    alt=""
-                  />正方</label
-                >
-              </div>
-            </fieldset>
-          </form>
+      <div class="pd-list-container layout py-8 px-md-12 px-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <label for="toggleFilter" class="btn btn-sec-noline"><img src="/assets/images/icon/icon-filter.svg"
+              alt="" />隱藏篩選器</label>
+          <input type="checkbox" id="toggleFilter" />
+          <div class="dropdown">
+            <button class="btn btn-sec-noline text-secondary-800 pd-list-dropdown dropdown-toggle py-0 mb-md-6 mb-0"
+              type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              按<span class="text-black">最新</span><span class="me-1">排序</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end py-3 px-2 mt-7p" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item py-1 px-2 d-flex justify-content-between align-items-center" href="#"><span
+                    class="text-black">最新</span><img src="/assets/images/icon/icon-tick.svg" alt="icon-check" /></a>
+              </li>
+              <li>
+                <a class="dropdown-item py-1 px-2" href="#"><span class="text-black">價格 - 低至高</span></a>
+              </li>
+              <li>
+                <a class="dropdown-item py-1 px-2" href="#"><span class="text-black">價格 - 高至低</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!-- 卡片區 -->
-        <main id="card-area" class="pd-list-content content">
-          <div class="d-flex flex-wrap gap-3 gap-md-6 pd-list-cardbox">
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/Homepage/card1.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="貓咪家庭"
-                  />
+        <div class="row-pd-list">
+          <!-- 篩選器區 -->
+          <div id="filter-panel" class="pd-list-sidebar me-12 sidebar align-self-start">
+            <form class="vstack">
+              <fieldset class="border-top border-bottom px-6 py-4">
+                <legend class="fs-6 d-none">類別</legend>
+                <!-- 促銷 → tag-yellow -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="filter-promo" name="tag-filter"
+                    value="tag-pink" />
+                  <label class="form-check-label mb-3 ps-1" for="cat-photo">促銷</label>
                 </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    <a
-                      href="./product-details.html"
-                      class="stretched-link text-black"
-                      >貓咪家庭</a
-                    >
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="filter-popular" name="tag-filter"
+                    value="tag-yellow" />
+                  <label class="form-check-label mb-3 ps-1" for="cat-template">人氣</label>
                 </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-blue"></div>
-                  <div class="d-sm-none tag-s tag-blue"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-1.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="海岸日落餘暉"
-                  />
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="filter-free" name="tag-filter" value="tag-blue" />
+                  <label class="form-check-label ps-1" for="cat-template">每週免費</label>
                 </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    <a
-                      href="./product-details.html"
-                      class="stretched-link text-black"
-                      >海岸日落餘暉</a
-                    >
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>
-                      <s class="text-secondary-800">120</s>
-                      <span class="text-error fs-lg fw-bold">$0</span>
-                    </p>
-                  </div>
+              </fieldset>
+              <fieldset class="border-bottom px-6 py-4">
+                <legend class="fs-md fw-medium">人數</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="photo" id="cat-photo" />
+                  <label class="form-check-label mb-3 ps-1" for="cat-photo">0人</label>
                 </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-2.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="神秘霧林"
-                  />
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template" />
+                  <label class="form-check-label mb-3 ps-1" for="cat-template">1人</label>
                 </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">神秘霧林</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$140</p>
-                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template" />
+                  <label class="form-check-label mb-3 ps-1" for="cat-template">2人</label>
                 </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-3.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="山嶺晨曦"
-                  />
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="template" id="cat-template" />
+                  <label class="form-check-label ps-1" for="cat-template">3+人</label>
                 </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">山嶺晨曦</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$130</p>
-                  </div>
+              </fieldset>
+              <fieldset class="border-bottom px-6 py-4">
+                <legend class="fs-md fw-medium mb-2">顏色</legend>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="color-dot" style="--c: #f44336"></span>
+                  <span class="color-dot" style="--c: #ff9800; border-color: #eee; opacity: 0.4"></span>
+                  <span class="color-dot" style="--c: #ffeb3b"></span>
+                  <span class="color-dot" style="--c: #795548"></span>
+                  <span class="color-dot" style="--c: #4caf50"></span>
+                  <span class="color-dot" style="--c: #9c27b0"></span>
+                  <span class="color-dot" style="--c: #2196f3"></span>
+                  <span class="color-dot" style="--c: #e91e63"></span>
+                  <span class="color-dot" style="--c: #000000"></span>
+                  <span class="color-dot" style="--c: #ffffff"></span>
+                  <span class="color-dot" style="--c: #9e9e9e"></span>
                 </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-4.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="粉櫻大道春景"
-                  />
+              </fieldset>
+              <fieldset class="px-6 py-4">
+                <legend class="fs-md fw-medium">比例</legend>
+                <div class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
+                  style="place-content: center; padding-left: 0px">
+                  <input class="form-check-input" type="checkbox" value="photo" id="vertical" />
+                  <label class="form-check-label fw-medium" for="cat-photo"><img class="pe-1"
+                      src="/assets/images/icon/icon-vertical.svg" alt="" />垂直</label>
                 </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    粉櫻大道春景
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$130</p>
-                  </div>
+                <div class="form-check border border-secondary-700 d-flex py-3 rounded-3 mb-3"
+                  style="place-content: center; padding-left: 0px">
+                  <input class="form-check-input" type="checkbox" value="template" id="horizontal" />
+                  <label class="form-check-label fw-medium" for="cat-template"><img class="pe-1"
+                      src="/assets/images/icon/icon-horizontal.svg" alt="" />水平</label>
                 </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-pink"></div>
-                  <div class="d-sm-none tag-s tag-pink"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-5.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="現代辦公佈置"
-                  />
+                <div class="form-check border border-secondary-700 d-flex py-3 rounded-3"
+                  style="place-content: center; padding-left: 0px">
+                  <input class="form-check-input" type="checkbox" value="template" id="icon-square" />
+                  <label class="form-check-label fw-medium" for="cat-template"><img class="pe-1"
+                      src="/assets/images/icon/icon-square.svg" alt="" />正方</label>
                 </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    現代辦公佈置
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>
-                      <s class="text-secondary-800">120</s>
-                      <span class="text-error fs-lg fw-bold">$100</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-blue"></div>
-                  <div class="d-sm-none tag-s tag-blue"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-6.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="演講者"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">演講者</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>
-                      <s class="text-secondary-800">100</s>
-                      <span class="text-error fs-lg fw-bold">$0</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-7.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="居家遠距工作"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    居家遠距工作
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-8.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="萌貓日常"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">萌貓日常</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-9.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="奔馳馬群"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">奔馳馬群</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$110</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-11.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="現代室內設計"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    現代室內設計
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$120</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-12.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="室內植物架"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">室內植物架</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$110</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-pink"></div>
-                  <div class="d-sm-none tag-s tag-pink"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-13.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="粉紅蓮花"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">粉紅蓮花</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>
-                      <s class="text-secondary-800">100</s>
-                      <span class="text-error fs-lg fw-bold">$90</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-14.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="現代建築"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">現代建築</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$120</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-15.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="星空山景"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">星空山景</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$130</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-16.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="室內植物與衣物"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    室內植物與衣物
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$110</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-17.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="美食拼盤"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">美食拼盤</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$110</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-18.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="火箭發射"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">火箭發射</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$110</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-19.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="流星"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">流星</h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$110</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/Homepage/card2.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="雪山日出空拍景觀圖"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    雪山日出空拍景觀圖
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品列表頁/card-21.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden"
-                    alt="極簡山丘風景照"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    極簡山丘風景照
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/Homepage/card14.png"
-                    class="card-img-top img-fluid card-img object-position-top rounded-4 oveflow-hidden"
-                    alt="綠眼長毛貓側臉寫真"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    綠眼長毛貓側臉寫真
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品詳細頁/card-2.png"
-                    class="card-img-top img-fluid card-img object-position-right-15 rounded-4 oveflow-hidden"
-                    alt="酷貓戴墨鏡幽默圖像"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    酷貓戴墨鏡幽默圖像
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-100 pd-list-md-col-6 mb-6">
-              <div class="card border-0 position-relative">
-                <!-- 卡片圖片區 -->
-                <div class="card-img-wrapper overflow-hidden rounded-4">
-                  <div class="d-none d-sm-block tag-m tag-yellow"></div>
-                  <div class="d-sm-none tag-s tag-yellow"></div>
-                  <%- include('./layout/inCardBtn.ejs'); -%>
-                  <img
-                    src="/assets/images/產品詳細頁/card-3.png"
-                    class="card-img-top img-fluid card-img rounded-4 oveflow-hidden object-position-center-25"
-                    alt="驚訝表情白貓特寫照"
-                  />
-                </div>
-                <!-- 卡片描述區 -->
-                <div class="card-body">
-                  <h5 class="card-title fs-md fs-md-lg fw-bold">
-                    驚訝表情白貓特寫照
-                  </h5>
-                  <div class="card-text d-flex justify-content-between">
-                    <p>相片</p>
-                    <p>$100</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </fieldset>
+            </form>
           </div>
 
-          <div class="more-btn d-flex justify-content-center">
-            <button type="button" class="btn btn-sec-outline">查看更多</button>
-          </div>
-        </main>
+          <!-- 卡片區 -->
+          <main id="card-area" class="pd-list-content content">
+            <div class="d-flex flex-wrap gap-3 gap-md-6 pd-list-cardbox">
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/Homepage/card1.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="貓咪家庭" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      <a href="./product-details.html" class="stretched-link text-black">貓咪家庭</a>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-blue"></div>
+                    <div class="d-sm-none tag-s tag-blue"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-1.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="海岸日落餘暉" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      <a href="./product-details.html" class="stretched-link text-black">海岸日落餘暉</a>
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>
+                        <s class="text-secondary-800">120</s>
+                        <span class="text-error fs-lg fw-bold">$0</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-2.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="神秘霧林" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">神秘霧林</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$140</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-3.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="山嶺晨曦" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">山嶺晨曦</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$130</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-4.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="粉櫻大道春景" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      粉櫻大道春景
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$130</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-pink"></div>
+                    <div class="d-sm-none tag-s tag-pink"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-5.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="現代辦公佈置" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      現代辦公佈置
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>
+                        <s class="text-secondary-800">120</s>
+                        <span class="text-error fs-lg fw-bold">$100</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-blue"></div>
+                    <div class="d-sm-none tag-s tag-blue"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-6.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="演講者" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">演講者</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>
+                        <s class="text-secondary-800">100</s>
+                        <span class="text-error fs-lg fw-bold">$0</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-7.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="居家遠距工作" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      居家遠距工作
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-8.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="萌貓日常" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">萌貓日常</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-9.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="奔馳馬群" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">奔馳馬群</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-11.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="現代室內設計" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      現代室內設計
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$120</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-12.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="室內植物架" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">室內植物架</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-pink"></div>
+                    <div class="d-sm-none tag-s tag-pink"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-13.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="粉紅蓮花" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">粉紅蓮花</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>
+                        <s class="text-secondary-800">100</s>
+                        <span class="text-error fs-lg fw-bold">$90</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-14.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="現代建築" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">現代建築</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$120</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-15.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="星空山景" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">星空山景</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$130</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-16.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="室內植物與衣物" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      室內植物與衣物
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-17.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="美食拼盤" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">美食拼盤</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-18.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="火箭發射" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">火箭發射</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-19.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="流星" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">流星</h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$110</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4 style-px">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/Homepage/card2.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="雪山日出空拍景觀圖" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      雪山日出空拍景觀圖
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4 style-px">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品列表頁/card-21.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden" alt="極簡山丘風景照" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      極簡山丘風景照
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4 style-px">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/Homepage/card14.png"
+                        class="card-img-top img-fluid card-img object-position-top rounded-4 oveflow-hidden"
+                        alt="綠眼長毛貓側臉寫真" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      綠眼長毛貓側臉寫真
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4 style-px">
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品詳細頁/card-2.png"
+                        class="card-img-top img-fluid card-img object-position-right-15 rounded-4 oveflow-hidden"
+                        alt="酷貓戴墨鏡幽默圖像" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      酷貓戴墨鏡幽默圖像
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-100 pd-list-md-col-6 mb-6">
+                <div class="card border-0 position-relative">
+                  <!-- 卡片圖片區 -->
+                  <div class="card-img-wrapper overflow-hidden rounded-4 style-px">
+                    <div class="d-none d-sm-block tag-m tag-yellow"></div>
+                    <div class="d-sm-none tag-s tag-yellow"></div>
+                    <%- include('./layout/inCardBtn.ejs'); -%>
+                      <img src="/assets/images/產品詳細頁/card-3.png"
+                        class="card-img-top img-fluid card-img rounded-4 oveflow-hidden object-position-center-25"
+                        alt="驚訝表情白貓特寫照" />
+                  </div>
+                  <!-- 卡片描述區 -->
+                  <div class="card-body">
+                    <h5 class="card-title fs-md fs-md-lg fw-bold">
+                      驚訝表情白貓特寫照
+                    </h5>
+                    <div class="card-text d-flex justify-content-between">
+                      <p>相片</p>
+                      <p>$100</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="more-btn d-flex justify-content-center">
+              <button type="button" class="btn btn-sec-outline">查看更多</button>
+            </div>
+          </main>
+        </div>
       </div>
-    </div>
 
-    <%- include('./layout/footer'); -%>
-    <script>
-      (function () {
-        const checkboxSelector = 'input[name="tag-filter"]';
-        const checkboxes = Array.from(
-          document.querySelectorAll(checkboxSelector)
-        );
-        const cards = Array.from(
-          document.querySelectorAll("#card-area .card.border-0")
-        );
+      <%- include('./layout/footer'); -%>
+        <script>
+          (function () {
+            const checkboxSelector = 'input[name="tag-filter"]';
+            const checkboxes = Array.from(
+              document.querySelectorAll(checkboxSelector)
+            );
+            const cards = Array.from(
+              document.querySelectorAll("#card-area .card.border-0")
+            );
 
-        function getActiveTagClasses() {
-          return checkboxes.filter((cb) => cb.checked).map((cb) => cb.value); // 例如 ["tag-yellow", "tag-blue"]
-        }
+            function getActiveTagClasses() {
+              return checkboxes.filter((cb) => cb.checked).map((cb) => cb.value); // 例如 ["tag-yellow", "tag-blue"]
+            }
 
-        function cardHasAnyTag(card, tagClasses) {
-          // 在卡片內找是否存在任一個對應的 tag 角標元素
-          return tagClasses.some((cls) => card.querySelector("." + cls));
-        }
+            function cardHasAnyTag(card, tagClasses) {
+              // 在卡片內找是否存在任一個對應的 tag 角標元素
+              return tagClasses.some((cls) => card.querySelector("." + cls));
+            }
 
-        function applyFilter() {
-          const active = getActiveTagClasses();
-          cards.forEach((card) => {
-            // 外層容器（拿來整塊隱藏卡片）
-            const wrapper = card.closest(".h-100") || card;
+            function applyFilter() {
+              const active = getActiveTagClasses();
+              cards.forEach((card) => {
+                // 外層容器（拿來整塊隱藏卡片）
+                const wrapper = card.closest(".h-100") || card;
 
-            // 若沒有任何勾選 → 顯示全部
-            const match =
-              active.length === 0 ? true : cardHasAnyTag(card, active);
+                // 若沒有任何勾選 → 顯示全部
+                const match =
+                  active.length === 0 ? true : cardHasAnyTag(card, active);
 
-            wrapper.classList.toggle("d-none", !match);
-          });
-        }
+                wrapper.classList.toggle("d-none", !match);
+              });
+            }
 
-        // 綁定事件
-        checkboxes.forEach((cb) => cb.addEventListener("change", applyFilter));
+            // 綁定事件
+            checkboxes.forEach((cb) => cb.addEventListener("change", applyFilter));
 
-        // 初次執行（頁面載入時就依當前勾選狀態篩選）
-        applyFilter();
-      })();
-    </script>
-    <script type="module" src="../main.js"></script>
-  </body>
+            // 初次執行（頁面載入時就依當前勾選狀態篩選）
+            applyFilter();
+          })();
+        </script>
+        <script type="module" src="../main.js"></script>
+</body>
+
 </html>
